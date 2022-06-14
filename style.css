@@ -11,24 +11,27 @@ body {
 
 .main_button {
     background-color: #AF272B;
-    text-decoration: none;
     text-transform: uppercase;
-    color: white;
     font-family: 'Kanit', sans-serif;
     font-weight: 500;
-    /* font-size: 1.375rem; */
+    /*font-size: 1.375rem;*/
     font-size: 1.15vw;
-    /* padding: 1.1875rem 2.9375rem; */
-    padding: 2% 3.5%;
+    /*padding: 1.1875rem 2.9375rem;*/
+    padding: 1.1% 2.8%;
     box-sizing: border-box;
     border-radius: 8px;
+}
+
+.main_button > a {
+    text-decoration: none;
+    color: white;
 }
 
 /*HEADER*/
 
 header {
     background: url("pictures/Gouffre_de_Poudrey_2010.jpg") center top;
-    height: 1087px;
+    /*height: 1087px;*/
     position: relative;
 }
 
@@ -58,11 +61,23 @@ header nav a {
     color: white;
     text-decoration: none;
     font-family: 'Changa One', cursive;
-    font-size: 2vw;
+    font-size: 2.3vw;
+}
+
+header > nav > div { /*Conteneur LE GOUFFRE*/
+    display: flex;
+    column-gap: 2px;
+    align-items: flex-end;
+}
+
+header > nav > div > svg { /*Flèche à côté de gouffe*/
+    width: 1.3vw;
+    /*align-self: flex-end;*/
+    height: auto;
 }
 
 #logo {
-    width: 225px;
+    width: 15vw;
 }
 
 /*GROS TEXTE*/
@@ -74,7 +89,7 @@ header > p {
     color: white;
     text-align: center;
     max-width: 78%;
-    margin: 250px auto 0;
+    margin: 8% auto 0;
     text-shadow: 0.8125rem -0.5625rem 1.25rem black;
 }
 
@@ -82,8 +97,8 @@ header > p {
 
 #header-stalactites-desktop {
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    /*position: absolute;
+    bottom: 0;*/
     background-image: url("pictures/stalactites_desktop.svg");
     height: 45px;
 }
@@ -94,9 +109,11 @@ section {
     display: flex;
     justify-content: space-around;
     max-width: 1500px;
-    position: absolute;
-    width: 100%;
-    top: 800px;
+    margin: auto;
+    /*position: absolute;
+    /*width: 100%;
+    top: 800px;*/
+    transform: translate(0,126px);
 }
 
 section > div {
@@ -123,28 +140,30 @@ section > div > h2 {
     text-shadow: 0.1875rem 0.125rem 0.1875rem rgba(0,0,0,0.65);
 }
 
-section > div > p {
+section > div > p:nth-child(2) {
     margin: 0;
     position: absolute;
     top: 110px;
     max-width: 227px;
     font-family: 'Kanit', sans-serif;
     font-size: 1.375rem;
+    /*font-size: 135%;*/
     color: white;
     text-shadow: 0 0.1875rem 0.375rem rgba(0,0,0,0.50);
+    line-height: 1.875rem;
 }
 
-section > div > a {
+section > div > p > a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Kanit', sans-serif;
     font-weight: 500;
     font-size: 1.125rem;
+    /*font-size: 1vw;*/
     color: white;
     background-color: #AF272B;
     padding: 0.5625rem 1.125rem;
     box-sizing: border-box;
-    width: 169px;
     border-radius: 8px;
 }
 
@@ -153,33 +172,53 @@ section > div > a {
 /*Le gouffre*/
 
 #main_Le-gouffre {
-    margin-top: 140px;
+    margin-top: 120px;
     display: flex;
 }
 
 #main_Le-gouffre > div:first-child {
     margin: 0 1.875rem 0 1.625rem;
     flex-basis: 42%;
+    display: flex;
+    flex-direction: column;
 }
 
-#main_Le-gouffre > div > h2 {
+#main_Le-gouffre > div:first-child > h2 {
     font-family: 'Changa One', cursive;
     /* font-size: 2.25rem; */
     font-size: 1.9vw;
     margin: 0;
 }
 
-#main_Le-gouffre > div > p {
+#main_Le-gouffre > div:first-child > p:nth-child(2) {
     font-family: 'Dosis', sans-serif;
     /* font-size: 2.25rem; */
     font-size: 1.9vw;
+    margin: 5% 0 9%;
+}
+
+#main_Le-gouffre > div:first-child > p:nth-child(3) {
+    align-self: flex-end;
 }
 
 #main_Le-gouffre > div:nth-child(2) {
 flex-basis: 55%;
 }
 
-#main_Le-gouffre > div > img {
+#main_Le-gouffre > div:nth-child(2) > img {
     width: 100%;
     height: auto;
+}
+
+/*La gallerie*/
+
+#main_Gallery {
+    display: grid;
+    grid-template-columns: 480px 960px 480px;
+    grid-template-rows: 300px 230px;
+}
+
+#main_Gallery img {
+    width: 100%;
+    max-height: 100%;
 }
