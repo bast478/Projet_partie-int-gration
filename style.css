@@ -32,7 +32,7 @@ body {
     /*padding: 1.1875rem 2.9375rem;*/
     padding: 0.5vw 1vw;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: .4vw;
     margin: 0;
     display: inline-block;
 }
@@ -40,6 +40,30 @@ body {
 .main_button > a {
     text-decoration: none;
     color: white;
+}
+
+.secondary_button {
+    background-color: #C9AA6E;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 1.15vw;
+    padding: 0.4vw 0.8vw;
+    box-sizing: border-box;
+    border-radius: .2vw;
+    margin: 0;
+    display: inline-block;
+}
+
+.secondary_button > a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer_text {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.55vw;
+    line-height: 1.2;
 }
 
 /*HEADER*/
@@ -104,18 +128,17 @@ header > p {
     color: white;
     text-align: center;
     max-width: 78%;
-    margin: 8% auto 0;
+    margin: 7.969vw auto 0;
     text-shadow: 0.8125rem -0.5625rem 1.25rem black;
 }
 
 /*Stalactites header*/
 
-#header_stalactites-desktop {
-    width: 100%;
-    /*position: absolute;
-    bottom: 0;*/
-    background-image: url("pictures/stalactites_desktop.svg");
-    height: 45px;
+#header_stalactites {
+    /*height: 45px;*/
+    height: 2.344vw;
+    background-image: url('pictures/header_stalactites.svg');
+    background-position: left bottom;
 }
 
 /*Section infos header*/
@@ -128,7 +151,7 @@ header > p {
     /*position: absolute;
     /*width: 100%;
     top: 800px;*/
-    transform: translate(0,126px);
+    transform: translate(0,7.969vw);
 }
 
 #header_infos > div {
@@ -294,7 +317,7 @@ header > p {
 /*Spectacle*/
 
 #main_Spectacle {
-    background: url("pictures/spectacle.JPG") no-repeat center;
+    background: url("pictures/main_spectacle.JPG") no-repeat center;
     height: 11vw;
     color: white;
     display: flex;
@@ -323,7 +346,7 @@ header > p {
 
 #main_Informations-pratiques > div:first-child > img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #main_Informations-pratiques > div:nth-child(2) {
@@ -342,7 +365,145 @@ header > p {
     top: 10%;
     left: 6%;
     /*padding: 18px;*/
-    padding: .95vw;
+    /* padding: .95vw; */
+    padding: .8vw;
     box-sizing: border-box;
     text-align: center;
+}
+
+/*Réservation*/
+
+#main_Reservation {
+    position: relative;
+    margin-top: 1vw;
+}
+
+#main_Reservation > div{
+    height: 21vw;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main_Reservation > div > img {
+    height: 100%;
+    width: auto;
+}
+
+#main_Reservation > div > section {
+    background-color: #f5f5f5;
+    width: 18.8vw;
+    padding: .8vw;
+    box-sizing: border-box;
+    position: absolute;
+    top: 1.49%;
+    left: .67%;
+}
+
+#main_Reservation > img:nth-child(2) {
+    width: auto;
+    height: 42%;
+    position: absolute;
+    top: 0;
+    left: 1.2%;
+}
+
+#main_Reservation > img:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 2.5%;
+    height: 60%;
+    width: auto;
+}
+
+/*FOOTER*/
+
+footer {
+    background: url('pictures/Gouffre_de_Poudrey_2010.jpg') center bottom;
+    /*height: 30.104vw;*/
+}
+
+#footer_stalagmites {
+    /*height: 70px;*/
+    height: 3.646vw;
+    background-image: url('pictures/footer_stalagmites.svg');
+    background-position: left top;
+}
+
+footer > div:nth-child(2) {
+    margin: 4vw 0 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5.052vw 3.854vw;
+    box-sizing: border-box;
+}
+
+address {
+    font-style: normal;
+    color: white;
+}
+
+address > :not(p:nth-child(3)) {
+    text-shadow: -.06vw -.25vw .15vw black;
+}
+
+address > p:nth-child(3) {
+    margin-left: 1.5vw;
+}
+
+#social-networks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.135vw;
+    row-gap: 0.781vw;
+}
+
+#social-networks > a > svg {
+    width: 3.385vw;
+    height: 3.385vw;
+}
+
+#social-networks > a {
+    width: 3.385vw;
+    height: 3.385vw;
+}
+
+footer > div:nth-child(2) > div:nth-child(3) {
+    margin-top: 2.135vw;
+}
+
+footer > div:nth-child(2) > div:nth-child(3) > img {
+    width: 22.61vw;
+}
+
+form {
+    color: white;
+    width: 21.354vw;
+    text-align: right;
+}
+
+form > input[type=email]{
+    width: 15.521vw;
+    height: 1.979vw;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+form > input[type=submit] {
+    background-color: #C9AA6E;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 1.15vw;
+    padding: 0.4vw 0.8vw;
+    box-sizing: border-box;
+    border-radius: .2vw;
+    border: none;
+    width: 9.427vw;
+    height: 2.396vw;
+    margin-top: 1.094vw;
 }
