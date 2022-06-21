@@ -11,14 +11,14 @@ body {
 
 .main_titles {
     font-family: 'Changa One', cursive;
-    /* font-size: 2.25rem; */
+    /* font-size: 36px; */
     font-size: 1.9vw;
     margin: 0;
 }
 
 .main_texts {
     font-family: 'Dosis', sans-serif;
-    /* font-size: 2.25rem; */
+    /* font-size: 36px; */
     font-size: 1.9vw;
 }
 
@@ -27,9 +27,9 @@ body {
     text-transform: uppercase;
     font-family: 'Kanit', sans-serif;
     font-weight: 500;
-    /*font-size: 1.375rem;*/
+    /*font-size: 22px;*/
     font-size: 1.15vw;
-    /*padding: 1.1875rem 2.9375rem;*/
+    /*padding: 19px 47px;*/
     padding: 0.5vw 1vw;
     box-sizing: border-box;
     border-radius: .4vw;
@@ -70,14 +70,14 @@ body {
 
 header {
     background: url("pictures/Gouffre_de_Poudrey_2010.jpg") center top;
-    /*height: 1087px;*/
+    /*height: 67.9375rem;*/
     position: relative;
 }
 
 /*Bar de navigation*/
 
 nav {
-    padding: 0.875rem 5.5625rem 0.375rem;
+    padding: .875rem 5.5625rem .375rem;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -129,16 +129,17 @@ header > p {
     text-align: center;
     max-width: 78%;
     margin: 7.969vw auto 0;
-    text-shadow: 0.8125rem -0.5625rem 1.25rem black;
+    /*text-shadow: 13px -9px 20px black;*/
+    text-shadow: 0.677vw -0.469vw 1.042vw black;
 }
 
 /*Stalactites header*/
 
 #header_stalactites {
-    /*height: 45px;*/
-    height: 2.344vw;
+    height: 45px;
+    /* height: 2.344vw; */
     background-image: url('pictures/header_stalactites.svg');
-    background-position: left bottom;
+    /* background-position: left bottom; */
 }
 
 /*Section infos header*/
@@ -150,7 +151,7 @@ header > p {
     margin: auto;
     /*position: absolute;
     /*width: 100%;
-    top: 800px;*/
+    top: 50rem;*/
     transform: translate(0,7.969vw);
 }
 
@@ -166,8 +167,10 @@ header > p {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    border-radius: 10px;
-    box-shadow: 7px 6px 4px rgba(0,0,0,0.33);
+    /*border-radius: .625rem;*/
+    border-radius: 0.521vw;
+    /*box-shadow: .4375rem .375rem .25rem rgba(0,0,0,0.33);*/
+    box-shadow: 0.365vw 0.313vw 0.208vw rgba(0,0,0,0.33);
 }
 
 #header_infos > div > h2 {
@@ -175,11 +178,15 @@ header > p {
     color: white;
     font-family: 'Changa One', cursive;
     font-size: 2.25rem;
-    text-shadow: 0.1875rem 0.125rem 0.1875rem rgba(0,0,0,0.65);
+    /*text-shadow: 3px 2px 3px rgba(0,0,0,0.65);*/
+    text-shadow: 0.156vw 0.104vw 0.156vw rgba(0,0,0,0.65);
+}
+
+#header_infos > div > p {
+    margin: 0;
 }
 
 #header_infos > div > p:nth-child(2) {
-    margin: 0;
     position: absolute;
     top: 110px;
     max-width: 227px;
@@ -187,7 +194,8 @@ header > p {
     font-size: 1.375rem;
     /*font-size: 135%;*/
     color: white;
-    text-shadow: 0 0.1875rem 0.375rem rgba(0,0,0,0.50);
+    /*text-shadow: 0 3px 6px rgba(0,0,0,0.50);*/
+    text-shadow: 0 0.156vw 0.313vw rgba(0,0,0,0.50);
     line-height: 1.875rem;
 }
 
@@ -200,9 +208,10 @@ header > p {
     /*font-size: 1vw;*/
     color: white;
     background-color: #AF272B;
-    padding: 0.5625rem 1.125rem;
+    padding: .5625rem 1.125rem;
     box-sizing: border-box;
-    border-radius: 8px;
+    /*border-radius: .5rem;*/
+    border-radius: 0.417vw;
     display: block;
 }
 
@@ -210,13 +219,17 @@ header > p {
 
 /*Le gouffre*/
 
+main {
+    margin-top: 7.917vw;
+}
+
 #main_Le-gouffre {
-    margin-top: 120px;
     display: flex;
 }
 
 #main_Le-gouffre > section:first-child {
-    margin: 0 1.875rem 0 1.625rem;
+    /*margin: 0 30px 0 26px;*/
+    margin: 0 1.563vw 0 1.354vw;
     flex-basis: 42%;
     display: flex;
     flex-direction: column;
@@ -244,27 +257,23 @@ header > p {
 #main_Gallery {
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    /*grid-template-rows: 328px 258px;*/
+    /*grid-template-rows: 20.5rem 16.125rem;*/
     grid-template-rows: auto auto;
     grid-template-areas: '. mainPicture .' '. mainPicture .';
     margin-top: 1vw;
 }
 
-#main_Gallery > img {
+#main_Gallery > div > img {
     width: 100%;
-    max-height: 100%;
-}
+    height: 100%;
+    object-fit: cover;
+  }
 
 #grid_main-item {
     /*grid-row: 1 / 3;
     grid-column: 2 / 3;*/
     grid-area: mainPicture;
     position: relative;
-}
-
-#grid_main-item > img {
-    width: 100%;
-    max-height: 100%;
 }
 
 #grid_main-item > svg {
@@ -275,14 +284,14 @@ header > p {
     height: auto;
 }
 
-.gallery_top {
-    /*padding: 20px 30px 0;*/
+ .gallery-top {
+    /*padding: 1.25rem 1.875rem 0;*/
     padding: 4% 6.25% 0;
     box-sizing: border-box;
 }
 
-.gallery_bottom {
-    /*padding: 20px 60px 0;*/
+.gallery-bottom {
+    /*padding: 1.25rem 3.75rem 0;*/
     padding: 4% 12.5% 4%;
     box-sizing: border-box;
 }
@@ -295,7 +304,8 @@ header > p {
 }
 
 #main_La-visite > section:nth-child(2) {
-    margin: 0 1.875rem 0;
+    /*margin: 0 30px 0;*/
+    margin: 0 1.563vw 0;
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
@@ -311,7 +321,7 @@ header > p {
 
 #main_La-visite > div:first-child > img {
     width: 100%;
-   height: auto;
+    height: auto;
 }
 
 /*Spectacle*/
@@ -328,7 +338,7 @@ header > p {
 }
 
 #main_Spectacle > h2 {
-    /*text-shadow: 6px -6px 3px rgba(0,0,0,0.50);*/
+    /*text-shadow: .375rem -0.375rem .1875rem rgba(0,0,0,0.50);*/
     text-shadow: .3vw -.3vw .15vw rgba(0,0,0,0.50);
 }
 
@@ -364,7 +374,7 @@ header > p {
     position: absolute;
     top: 10%;
     left: 6%;
-    /*padding: 18px;*/
+    /*padding: 1.125rem;*/
     /* padding: .95vw; */
     padding: .8vw;
     box-sizing: border-box;
@@ -426,10 +436,10 @@ footer {
 }
 
 #footer_stalagmites {
-    /*height: 70px;*/
-    height: 3.646vw;
+    height: 70px;
+    /* height: 3.646vw; */
     background-image: url('pictures/footer_stalagmites.svg');
-    background-position: left top;
+    /* background-position: left top; */
 }
 
 footer > div:nth-child(2) {
@@ -490,6 +500,7 @@ form > input[type=email]{
     border: none;
     outline: none;
     box-sizing: border-box;
+    background-color: #f5f5f5;
 }
 
 form > input[type=submit] {
@@ -506,4 +517,55 @@ form > input[type=submit] {
     width: 9.427vw;
     height: 2.396vw;
     margin-top: 1.094vw;
+}
+
+@media only screen and (max-width: 1100px) {
+    
+    /*Section infos header*/
+    
+    #header_infos > div {
+        width: 193px;
+        min-height: 265px;
+        padding: .4375rem;
+    }
+    
+    #header_infos > div > h2 {
+        font-size: 1.6875rem;
+    }
+    
+    #header_infos > div > p:nth-child(2) {
+        top: 73px;
+        max-width: 179px;
+        font-size: 1.3125rem;
+        line-height: 1.625rem;
+    }
+    
+    #header_infos > div > p > a {
+        font-size: 1.0625rem;
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    header > p {
+        max-width: 78%;
+        margin: 6.715vw auto 6.475vw;
+    }
+
+    /*Section infos header*/
+
+    #header_infos {
+        transform: translate(0);
+        /*margin-bottom: 9px;*/
+        margin-bottom: 1.079vw;
+    }
+
+    /*Main*/
+
+    main {
+        /*margin-top: 7px;*/
+        margin-top: 0.839vw;
+    }
+    
 }

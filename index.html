@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Dosis&family=Kanit:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Gouffre de Poudrey</title>
+    <script src="script-projet.js" defer></script>
 </head>
 <body>
     <header>
@@ -74,16 +75,16 @@
             </div>
         </div>
         <div id="main_Gallery">
-            <img src="pictures/gallery_pic_1.jpg" alt="Photo du gouffre." class="gallery_top">
-            <img src="pictures/gallery_pic_2.jpg" alt="Photo du gouffre." class="gallery_top">
+            <div class="gallery-top"><img src="pictures/gallery_pic_1.jpg" alt="Photo du gouffre."></div>
+            <div class="gallery-top"><img src="pictures/gallery_pic_2.jpg" alt="Photo du gouffre."></div>
             <div id="grid_main-item">
                 <img src="pictures/Gouffre_de_Poudrey_2010.jpg" alt="Photo du gouffre.">
                 <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.42285e-08 36.3552C-7.91831e-09 36.9075 0.447715 37.3552 1 37.3552L10 37.3552C10.5523 37.3552 11 36.9075 11 36.3552C11 35.8029 10.5523 35.3552 10 35.3552L2 35.3552L2 27.3552C2 26.8029 1.55228 26.3552 1 26.3552C0.447715 26.3552 -5.00652e-08 26.8029 -5.00652e-08 27.3552L3.42285e-08 36.3552ZM37.3553 0.999886C37.3553 0.447603 36.9076 -0.000112757 36.3553 -0.000114359L27.3553 -0.000114906C26.8031 -0.000113895 26.3553 0.4476 26.3553 0.999886C26.3553 1.55217 26.8031 1.99989 27.3553 1.99989L35.3553 1.99989L35.3553 9.99989C35.3553 10.5522 35.8031 10.9999 36.3553 10.9999C36.9076 10.9999 37.3553 10.5522 37.3553 9.99988L37.3553 0.999886ZM1.70711 37.0623L37.0624 1.70699L35.6482 0.292779L0.292893 35.6481L1.70711 37.0623Z" fill="#F5F5F5"/>
                 </svg>
             </div>
-            <img src="pictures/gallery_pic_4.jpg" alt="Photo du gouffre." class="gallery_bottom">
-            <img src="pictures/gallery_pic_5.jpg" alt="Photo du gouffre." class="gallery_bottom">
+            <div class="gallery-bottom"><img src="pictures/gallery_pic_4.jpg" alt="Photo du gouffre."></div>
+            <div class="gallery-bottom"><img src="pictures/gallery_pic_5.jpg" alt="Photo du gouffre."></div>
         </div>
         <div id="main_La-visite">
             <div>
@@ -269,7 +270,7 @@
             <form>
                 <h3 class="main_titles">Newsletter</h3>
                 <p class="footer_text">Pour avoir des actualités sur le gouffre.</p>
-                <input type="email" placeholder="Addresse mail" name="email" required>
+                <input class="footer_text" type="email" placeholder="Addresse mail" name="email" required>
                 <input type="submit" value="s'abonner">
             </form>
         </div>
