@@ -1,7 +1,6 @@
 // Gallerie Desktop
 
 const listMinPictures = Array.from(document.querySelectorAll('#main_Gallery > div:not(#grid_main-item) > img')); //Miniatures
-console.log(listMinPictures);
 const mainPicture = document.querySelector('#grid_main-item > img');
 
 // Evenement
