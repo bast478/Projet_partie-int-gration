@@ -213,7 +213,7 @@ header > p {
     box-sizing: border-box;
     /*border-radius: .5rem;*/
     border-radius: 0.417vw;
-    display: block;
+    display: inline-block;
 }
 
 /*MAIN*/
@@ -807,6 +807,16 @@ footer {
 footer > div:nth-child(2) {
     margin: 8px 0 0;
     padding: 0 1.875rem 1.375rem; /***************************/
+    /*padding: 3.597vw 2.638vw;*/
+}
+
+address {
+    text-align: center;
+    width: min-content;
+}
+
+address > p:nth-child(2) {
+    margin: .625rem 0 .875rem;
 }
 
 address > :not(p:nth-child(3)) {
@@ -840,35 +850,98 @@ footer > div:nth-child(2) > div:nth-child(3) {
 footer > div:nth-child(2) > div:nth-child(3) > img {
     width: initial;
 }
-/********************************/
+
 form {
     color: white;
-    width: 21.354vw;
-    text-align: right;
+    width: min-content;
+    text-align: center;
+}
+
+form > p:nth-child(2) {
+    margin: .625rem 0 .875rem;
 }
 
 form > input[type=email]{
-    width: 15.521vw;
-    height: 1.979vw;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    background-color: #f5f5f5;
+    width: 190px;
+    height: 31px;
 }
 
 form > input[type=submit] {
-    background-color: #C9AA6E;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Kanit', sans-serif;
-    font-weight: 500;
-    font-size: 1.15vw;
-    padding: 0.4vw 0.8vw;
-    box-sizing: border-box;
-    border-radius: .2vw;
-    border: none;
-    width: 9.427vw;
-    height: 2.396vw;
-    margin-top: 1.094vw;
+    font-size: 1.0625rem;
+    padding: .1875rem .5625rem;
+    border-radius: 3px;
+    width: initial;
+    height: initial;
+    margin-top: .875rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+}
+
+@media only screen and (max-width: 780px) {
+
+    .main_button {
+        border-radius: 8px;
+    }
+
+    /*Section infos header*/
+    
+     /*#header_infos > div {
+        width: 193px;
+        min-height: 265px;
+        /*padding: .4375rem;
+    }
+    
+    #header_infos > div > h2 {
+        font-size: 1.6875rem;
+    }
+    
+    #header_infos > div > p:nth-child(2) {
+        top: 73px;
+        max-width: 179px;
+        font-size: 1.3125rem;
+        line-height: 1.625rem;
+    }
+    
+    #header_infos > div > p > a {
+        font-size: 1.0625rem;
+        padding: 5px 10px;
+    }*/
+
+    /*Section infos header*/
+
+#header_infos {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+    margin: 0 1.867vw 1.079vw;
+}
+
+#header_infos > div {
+    width: 100%;
+    min-height: initial;
+}
+
+#header_infos > div > h2 {
+    font-size: 2.25rem;
+}
+
+#header_infos > div > p:nth-child(2) {
+    /*top: 65px;*/
+    max-width: initial;
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+    position: initial;
+    margin: 2.3125rem 0 0;
+}
+
+#header_infos > div > p > a {
+    font-size: 1.125rem;
+    padding: .3125rem .5625rem;
+    border-radius: 8px;
+}
+
 }
