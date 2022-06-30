@@ -315,35 +315,45 @@ main {
 
 #modal > div:first-child {
     display: grid;
-    grid-template-areas: 'leftArrow mainPicture close rightArrow';
-    /*grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;*/
+    grid-template-areas: 'leftArrow mainPicture rightArrow';
+    grid-template-rows: 100%;
     height: 100%;
-    width: 100%;
     align-items: center;
+    padding: 1% 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-content: center;
 }
 
-#modal > div:first-child > img {
-    height: 95%;
-    max-width: 80%;
-    object-fit: scale-down;
+#modal > div:first-child > div {
     grid-area: mainPicture;
-    /*position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);*/
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#modal > div:first-child > div > img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+#modal > div:first-child > div > svg {
+    /*float: right;*/
+    width: 2vw;
+    position: absolute;
+    right: -2vw;
 }
 
 #modal > div:first-child > svg:first-child {
     grid-area: leftArrow;
+    max-height: 100%;
+    margin-right: 2vw;
 }
 
 #modal > div:first-child > svg:nth-child(3) {
     grid-area: rightArrow;
-}
-
-#modal > div:first-child > svg:last-child {
-    grid-area: close;
+    max-height: 100%;
 }
 
 /*La visite*/
@@ -749,6 +759,7 @@ header > nav > div > svg { /*Flèche à côté de gouffe*/
 
 #main_Spectacle > h2 {
     text-shadow: .375rem -0.375rem .1875rem rgba(0,0,0,0.50);
+    text-align: center;
 }
 
 /*Infos pratiques*/

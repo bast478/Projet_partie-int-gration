@@ -56,15 +56,23 @@ for (let i = 0; i < 2; i++) {
     crossGallery.appendChild(crossGalleryLine);
 }
 
+//Div de photo du diapo
+const divMainPictureGallery = document.createElement('DIV');
+
 //Photo du diapo
 const mainPictureGallery = document.createElement('IMG');
 mainPictureGallery.setAttribute("alt", "Une photo du gouffre.");
 
 //Mettre les éléments du diapo dans une div
 divGridModal.appendChild(leftArrowGallery);
-divGridModal.appendChild(mainPictureGallery);
+
+divMainPictureGallery.appendChild(crossGallery);
+divMainPictureGallery.appendChild(mainPictureGallery);
+divGridModal.appendChild(divMainPictureGallery);
+
 divGridModal.appendChild(rightArrowGallery);
-divGridModal.appendChild(crossGallery);
+
+
 modal.appendChild(divGridModal);
 // EVENEMENTS
 
