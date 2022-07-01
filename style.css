@@ -313,7 +313,13 @@ main {
     background-color: rgba(0,0,0,0.4);
 }
 
-#modal > div:first-child {
+/*#modal  > svg {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}*/
+
+#gridModal {
     display: grid;
     grid-template-areas: 'leftArrow mainPicture rightArrow';
     grid-template-rows: 100%;
@@ -323,35 +329,35 @@ main {
     box-sizing: border-box;
     justify-content: center;
     align-content: center;
+    margin: auto;
+    position: relative;
+    width: fit-content;
 }
 
-#modal > div:first-child > div {
+/*#crossGallery {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}*/
+
+#leftArrowGallery {
+    grid-area: leftArrow;
+    max-height: 100%;
+}
+
+#gridModal > div {
     grid-area: mainPicture;
     height: 100%;
     width: 100%;
-    position: relative;
 }
 
-#modal > div:first-child > div > img {
+#gridModal > div > img {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
 }
 
-#modal > div:first-child > div > svg {
-    /*float: right;*/
-    width: 2vw;
-    position: absolute;
-    right: -2vw;
-}
-
-#modal > div:first-child > svg:first-child {
-    grid-area: leftArrow;
-    max-height: 100%;
-    margin-right: 2vw;
-}
-
-#modal > div:first-child > svg:nth-child(3) {
+#rightArrowGallery {
     grid-area: rightArrow;
     max-height: 100%;
 }

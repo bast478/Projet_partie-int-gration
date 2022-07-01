@@ -4,6 +4,8 @@ function setAttributes(el, attrs) {
     }
 }
 
+/************************************************************/
+
 // CREATION DES VARIABLES ET ELEMENTS
 
 const svgNS = "http://www.w3.org/2000/svg";
@@ -16,10 +18,11 @@ const modal = document.querySelector('#modal');
 
 //------Modal dans la gallerie--------
 const divGridModal = document.createElement('DIV');
+divGridModal.setAttribute('id', 'gridModal');
 
 //Flèche gauche gallerie
 const leftArrowGallery = document.createElementNS(svgNS, "svg");
-setAttributes(leftArrowGallery, {"width": "67", "height": "154", "viewBox": "0 0 67 154", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"});
+setAttributes(leftArrowGallery, {"id": "leftArrowGallery", "width": "67", "height": "154", "viewBox": "0 0 67 154", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"});
 for (let i = 0; i < 2; i++) {
     let leftArrowGalleryLine = document.createElementNS(svgNS, "line");
     if (i === 0) {
@@ -32,7 +35,7 @@ for (let i = 0; i < 2; i++) {
 
 //Flèche droite gallerie
 const rightArrowGallery = document.createElementNS(svgNS, "svg");
-setAttributes(rightArrowGallery, {"width": "67", "height": "154", "viewBox": "0 0 67 154", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"});
+setAttributes(rightArrowGallery, {"id": "rightArrowGallery", "width": "67", "height": "154", "viewBox": "0 0 67 154", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"});
 for (let i = 0; i < 2; i++) {
     let rightArrowGalleryLine = document.createElementNS(svgNS, "line");
     if (i === 0) {
@@ -44,8 +47,8 @@ for (let i = 0; i < 2; i++) {
 }
 
 //Croix gallerie
-const crossGallery = document.createElementNS(svgNS, "svg");
-setAttributes(crossGallery, {"width": "39", "height": "38", "viewBox": "0 0 39 38", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"});
+/*const crossGallery = document.createElementNS(svgNS, "svg");
+setAttributes(crossGallery, {"id": "crossGallery", "width": "39", "height": "38", "viewBox": "0 0 39 38", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"});
 for (let i = 0; i < 2; i++) {
     let crossGalleryLine = document.createElementNS(svgNS, "line");
     if (i === 0) {
@@ -54,7 +57,7 @@ for (let i = 0; i < 2; i++) {
         setAttributes(crossGalleryLine, {"x1": "2.70711", "y1": "1.29289", "x2": "38.0624", "y2": "36.6482", "stroke": "white", "stroke-width": "2"});
     }
     crossGallery.appendChild(crossGalleryLine);
-}
+}*/
 
 //Div de photo du diapo
 const divMainPictureGallery = document.createElement('DIV');
@@ -64,9 +67,10 @@ const mainPictureGallery = document.createElement('IMG');
 mainPictureGallery.setAttribute("alt", "Une photo du gouffre.");
 
 //Mettre les éléments du diapo dans une div
+/*divGridModal.appendChild(crossGallery);*/
+
 divGridModal.appendChild(leftArrowGallery);
 
-divMainPictureGallery.appendChild(crossGallery);
 divMainPictureGallery.appendChild(mainPictureGallery);
 divGridModal.appendChild(divMainPictureGallery);
 
@@ -74,6 +78,9 @@ divGridModal.appendChild(rightArrowGallery);
 
 
 modal.appendChild(divGridModal);
+
+/*************************************************************************/
+
 // EVENEMENTS
 
 // Changer de photo au click sur Desktop
