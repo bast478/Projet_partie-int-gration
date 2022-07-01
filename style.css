@@ -282,9 +282,6 @@ main {
     right: 5%;
     width: 2vw;
     height: auto;
-}
-
-#grid_main-item > svg:hover:nth-child(2) {
     cursor: pointer;
 }
 
@@ -313,12 +310,6 @@ main {
     background-color: rgba(0,0,0,0.4);
 }
 
-/*#modal  > svg {
-    position: absolute;
-    right: 2%;
-    top: 2%;
-}*/
-
 #gridModal {
     display: grid;
     grid-template-areas: 'leftArrow mainPicture rightArrow';
@@ -334,15 +325,17 @@ main {
     width: fit-content;
 }
 
-/*#crossGallery {
+#crossGallery {
     position: absolute;
-    top: 2%;
+    top: 3%;
     right: 2%;
-}*/
+    cursor: pointer;
+}
 
 #leftArrowGallery {
     grid-area: leftArrow;
     max-height: 100%;
+    cursor: pointer;
 }
 
 #gridModal > div {
@@ -360,6 +353,7 @@ main {
 #rightArrowGallery {
     grid-area: rightArrow;
     max-height: 100%;
+    cursor: pointer;
 }
 
 /*La visite*/

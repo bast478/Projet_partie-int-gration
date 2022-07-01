@@ -11,6 +11,7 @@ function setAttributes(el, attrs) {
 const svgNS = "http://www.w3.org/2000/svg";
 
 //***************************Gallerie Desktop**************************
+const listPictures = document.querySelectorAll('#main_Gallery > div > img');
 const listMinPictures = document.querySelectorAll('#main_Gallery > div:not(#grid_main-item) > img'); //Miniatures
 const mainPicture = document.querySelector('#grid_main-item > img');
 const arrow = document.querySelector('#grid_main-item > svg');
@@ -47,7 +48,7 @@ for (let i = 0; i < 2; i++) {
 }
 
 //Croix gallerie
-/*const crossGallery = document.createElementNS(svgNS, "svg");
+const crossGallery = document.createElementNS(svgNS, "svg");
 setAttributes(crossGallery, {"id": "crossGallery", "width": "39", "height": "38", "viewBox": "0 0 39 38", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"});
 for (let i = 0; i < 2; i++) {
     let crossGalleryLine = document.createElementNS(svgNS, "line");
@@ -57,7 +58,7 @@ for (let i = 0; i < 2; i++) {
         setAttributes(crossGalleryLine, {"x1": "2.70711", "y1": "1.29289", "x2": "38.0624", "y2": "36.6482", "stroke": "white", "stroke-width": "2"});
     }
     crossGallery.appendChild(crossGalleryLine);
-}*/
+}
 
 //Div de photo du diapo
 const divMainPictureGallery = document.createElement('DIV');
@@ -67,7 +68,7 @@ const mainPictureGallery = document.createElement('IMG');
 mainPictureGallery.setAttribute("alt", "Une photo du gouffre.");
 
 //Mettre les éléments du diapo dans une div
-/*divGridModal.appendChild(crossGallery);*/
+divGridModal.appendChild(crossGallery);
 
 divGridModal.appendChild(leftArrowGallery);
 
@@ -83,7 +84,7 @@ modal.appendChild(divGridModal);
 
 // EVENEMENTS
 
-// Changer de photo au click sur Desktop
+// Changer de photo de la gallerie au click sur Desktop
 
 listMinPictures.forEach(function(minPicture){
     minPicture.addEventListener("click", function() {
@@ -93,9 +94,39 @@ listMinPictures.forEach(function(minPicture){
     });
 });
 
-// Agrandir la photo au click de la flèche
+// Agrandir la photo de la gallerie au click de la flèche
 
 arrow.addEventListener('click', function(){
     mainPictureGallery.src = mainPicture.src;
     modal.style.display = "block";
+    closeDiapo(modal, crossGallery);
 });
+
+// Fermer la photo du diapo
+
+function closeDiapo (diapo, cross) {
+    cross.onclick = function() {
+        diapo.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == diapo) {
+          diapo.style.display = "none";
+        }
+    }
+}
+
+// Photo suivante ou précédente
+
+function precNextDiapo (list, main, left, right) {
+    for (let i=0; i < list.length; i++) {
+        if (main === list[i]) {
+            console.log(i);
+        }
+    }
+    left.onclick = function() {
+        listPictures
+    }
+}
+
+console.log(listPictures.length);
