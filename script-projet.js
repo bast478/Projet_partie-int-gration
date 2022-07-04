@@ -10,6 +10,12 @@ function setAttributes(el, attrs) {
 
 const svgNS = "http://www.w3.org/2000/svg";
 
+//***************************Menu burger*******************************
+const burgerMenu = document.querySelector('#menu-burger');
+
+//***************************Nav mobile********************************
+const mobileNav = document.getElementById('nav-mobile');
+
 //***************************Gallerie Desktop**************************
 const listPictures = document.querySelectorAll('#main_Gallery > div > img');
 const listMinPictures = document.querySelectorAll('#main_Gallery > div:not(#grid_main-item) > img'); //Miniatures
@@ -124,7 +130,6 @@ function precNextDiapo (list, mainPicGallery, left, right) {
     for (i=0; i < list.length; i++) {
         if (mainPicGallery.src === list[i].src) {
             console.log('main.src égal à', list[i].src);
-            let currentIndex = i;
             break;
         }
     }
@@ -147,3 +152,15 @@ function precNextDiapo (list, mainPicGallery, left, right) {
         mainPicGallery.src = list[i].src;
     }
 }
+
+// Click on burger menu
+
+burgerMenu.addEventListener('click', function() {
+    burgerMenu.classList.toggle('menu-burger-change');
+
+    if (mobileNav.style.display === 'none') {
+        mobileNav.style.display = 'block';
+    } else {
+        mobileNav.style.display = 'none';
+    }
+});

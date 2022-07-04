@@ -76,13 +76,21 @@ header {
 
 /*Bar de navigation*/
 
-nav {
+#nav-desktop {
     padding: .875rem 5.5625rem .375rem;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0,0,0,0.25);
+}
+
+#nav-mobile {
+    display: none;
+}
+
+#logo {
+    width: 15vw;
 }
 
 /*Test positionnement flèche nav le gouffre barre de liens*/
@@ -95,7 +103,7 @@ header nav div svg {
     align-self: flex-end;
 } */
 
-header nav a {
+.links-title-bar {
     text-transform: uppercase;
     color: white;
     text-decoration: none;
@@ -103,20 +111,20 @@ header nav a {
     font-size: 2.3vw;
 }
 
-header > nav > div { /*Conteneur LE GOUFFRE*/
+#nav-desktop > div:nth-child(2) { /*Conteneur LE GOUFFRE*/
     display: flex;
     column-gap: 2px;
     align-items: flex-end;
 }
 
-header > nav > div > svg { /*Flèche à côté de gouffe*/
+#nav-desktop > div:nth-child(2) > svg { /*Flèche à côté de gouffe*/
     width: 1.3vw;
     /*align-self: flex-end;*/
     height: auto;
 }
 
-#logo {
-    width: 15vw;
+#menu-burger {
+    display: none;
 }
 
 /*Gros texte*/
@@ -638,19 +646,19 @@ form > input[type=submit] {
 
     /*Bar de navigation*/
 
-nav {
+#nav-desktop {
     padding: 1.199vw 1.199vw 1.079vw;
 }
 
-header nav a {
+.links-title-bar {
     font-size: 3.237vw;
 }
 
-header > nav > div { /*Conteneur LE GOUFFRE*/
+#nav-desktop > div:nth-child(2) { /*Conteneur LE GOUFFRE*/
     column-gap: 0.120vw;
 }
 
-header > nav > div > svg { /*Flèche à côté de gouffe*/
+#nav-desktop > div:nth-child(2) > svg { /*Flèche à côté de gouffe*/
     width: 1.918vw;
 }
 
@@ -1035,6 +1043,49 @@ form > input[type=submit] {
 }
 
 @media only screen and (max-width: 609px) {
+
+    #logo {
+        width: 135px;
+    }
+
+    #nav-desktop > a:not(a:first-child), #nav-desktop > div:nth-child(2) {
+        display: none;
+    }
+
+    #menu-burger {
+        display: block;
+    }
+
+    .menu-burger-bar1, .menu-burger-bar2, .menu-burger-bar3 {
+        width: 40px;
+        height: 3px;
+        background-color: white;
+        border-radius: 1.5px;
+        transition: 0.4s;
+    }
+
+    .menu-burger-bar1, .menu-burger-bar2 {
+        margin-bottom: 8px;
+    }
+
+    .menu-burger-change .menu-burger-bar1 {
+        transform: rotate(45deg) translate(2px, 3px);
+        margin: 0;
+        height: 4px;
+    }
+
+    .menu-burger-change .menu-burger-bar2 {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .menu-burger-change .menu-burger-bar3 {
+        height: 4px;
+        transform: rotate(-45deg) translate(2px, -3px);
+    }
+
+    
+
     #header_infos > div:last-child > p:nth-child(2) {
         margin: 3.5rem 0 1.75rem;
     }
