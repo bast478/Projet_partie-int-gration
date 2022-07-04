@@ -99,6 +99,7 @@ listMinPictures.forEach(function(minPicture){
 arrow.addEventListener('click', function(){
     mainPictureGallery.src = mainPicture.src;
     modal.style.display = "block";
+    precNextDiapo(listPictures, mainPictureGallery, leftArrowGallery, rightArrowGallery);
     closeDiapo(modal, crossGallery);
 });
 
@@ -118,15 +119,31 @@ function closeDiapo (diapo, cross) {
 
 // Photo suivante ou précédente
 
-function precNextDiapo (list, main, left, right) {
-    for (let i=0; i < list.length; i++) {
-        if (main === list[i]) {
-            console.log(i);
+function precNextDiapo (list, mainPicGallery, left, right) {
+    let i;
+    for (i=0; i < list.length; i++) {
+        if (mainPicGallery.src === list[i].src) {
+            console.log('main.src égal à', list[i].src);
+            let currentIndex = i;
+            break;
         }
     }
+
     left.onclick = function() {
-        listPictures
+        if (i === 0) {
+            i = list.length - 1;
+        } else {
+            i--;
+        }
+        mainPicGallery.src = list[i].src;
+    }
+
+    right.onclick = function() {
+        if (i === list.length - 1) {
+            i = 0;
+        } else {
+            i++;
+        }
+        mainPicGallery.src = list[i].src;
     }
 }
-
-console.log(listPictures.length);
