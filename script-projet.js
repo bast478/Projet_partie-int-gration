@@ -158,9 +158,9 @@ function precNextDiapo (list, mainPicGallery, left, right) {
 burgerMenu.addEventListener('click', function() {
     burgerMenu.classList.toggle('menu-burger-change');
 
-    if (mobileNav.style.display === 'none') {
-        mobileNav.style.display = 'block';
+    if (mobileNav.style.height === '') {
+        mobileNav.style.height = '313px';
     } else {
-        mobileNav.style.display = 'none';
+        mobileNav.style.height = '';
     }
 });
