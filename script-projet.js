@@ -159,7 +159,7 @@ burgerMenu.addEventListener('click', function() {
     burgerMenu.classList.toggle('menu-burger-change');
 
     if (mobileNav.style.height === '') {
-        mobileNav.style.height = '313px';
+        mobileNav.style.height = '318px';
     } else {
         mobileNav.style.height = '';
     }

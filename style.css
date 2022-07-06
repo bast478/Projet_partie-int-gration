@@ -414,7 +414,7 @@ main {
 /*Spectacle*/
 
 #main_Spectacle {
-    background: url("pictures/main_spectacle.JPG") center/cover;
+    background: url("pictures/main_spectacle.jpg") center/cover;
     height: 11vw;
     color: white;
     display: flex;
@@ -543,11 +543,11 @@ address {
     color: white;
 }
 
-address > :not(p:nth-child(3)) {
+address > :not(p:nth-child(4)) {
     text-shadow: -.06vw -.25vw .15vw black;
 }
 
-address > p:nth-child(3) {
+address > p:nth-child(4) {
     margin-left: 1.5vw;
 }
 
@@ -659,9 +659,8 @@ form > input[type=submit] {
     }
     
     .footer_text {
-        font-family: 'Kanit', sans-serif;
         font-size: 1.3125rem;
-        line-height: 1.3125rem;
+        line-height: 1.4375rem;
     }
 
     /*Bar de navigation*/
@@ -706,6 +705,7 @@ form > input[type=submit] {
 
     #header_stalactites {
     height: 23px;
+    /*height: 22px;*/
     background-image: url('pictures/header_stalactites_tablet.svg');
     }
 
@@ -895,7 +895,9 @@ footer {
 
 #footer_stalagmites {
     height: 23px;
+    /*height: 22px;*/
     background-image: url('pictures/footer_stalagmites_tablet.svg');
+    /*background-position: left bottom;*/
 }
 
 footer > div:nth-child(2) {
@@ -910,14 +912,18 @@ address {
 }
 
 address > p:nth-child(2) {
-    margin: .625rem 0 .875rem;
-}
-
-address > :not(p:nth-child(3)) {
-    text-shadow: -0.0625rem -0.3125rem .1875rem black;
+    margin: .625rem 0 0;
 }
 
 address > p:nth-child(3) {
+    margin: .625rem 0 .875rem;
+}
+
+address > :not(p:nth-child(4)) {
+    text-shadow: -0.0625rem -0.3125rem .1875rem black;
+}
+
+address > p:nth-child(4) {
     margin-left: 0;
 }
 
@@ -1058,6 +1064,10 @@ main {
         row-gap: initial;
         column-gap: 1.5rem;
     }
+
+    form {
+        width: initial;
+    }
 }
 
 @media only screen and (max-width: 609px) {
@@ -1117,6 +1127,10 @@ main {
         font-size: 1.8125rem;
     }
 
+    /*footer .main_titles {
+        font-size: 1.375rem;
+    }*/
+
     .main_texts {
         font-size: 1.4375rem;
     }
@@ -1126,6 +1140,10 @@ main {
         padding: .25rem .5625rem;
     }
 
+    /*.footer_text {
+        font-size: 1.1875rem;
+    }*/
+
     /*HEADER*/
 
     /*gros texte*/
@@ -1133,6 +1151,7 @@ main {
     header > p {
         font-size: 2.8125rem;
         margin: 3.125rem auto 3.1875rem;
+        max-width: initial;
     }
 
     header > p:nth-child(3) {
@@ -1149,6 +1168,13 @@ main {
         margin: 0 .4375rem .875rem;
     }
 
+    #header_infos > div {
+        padding: .375rem .5625rem;
+        background-color: initial;
+        box-shadow: none;
+        background-image: linear-gradient(180deg, rgba(219, 170, 76, 0.85) 81.25%, rgba(219, 170, 76, 0) 100%);
+    }
+
     #header_infos > div > h2 {
         font-size: 1.8125rem;
         text-shadow: 3px 2px 3px rgba(0,0,0,0.65);
@@ -1156,6 +1182,7 @@ main {
 
     #header_infos > div > p:nth-child(2) {
         font-size: 1.1875rem;
+        line-height: 1.375rem;
         margin: .6875rem 0 1rem;
         text-shadow: 0 3px 5px rgba(0,0,0,0.50);
     }
@@ -1167,6 +1194,11 @@ main {
     #header_infos > div > p > a {
         font-size: .9375rem;
         padding: .25rem .5625rem;
+    }
+
+    #header_stalactites {
+        height: 11px;
+        background-image: url('pictures/header_stalactites_mobile.svg');
     }
 
     /*MAIN*/
@@ -1294,5 +1326,13 @@ main {
 
     /*FOOTER*/
 
-    
+    #footer_stalagmites {
+        background-image: url('pictures/footer_stalagmites_mobile.svg');
+        height: 16px;
+        background-position: bottom;
+    }
+
+    footer > div:nth-child(2) {
+        padding: 0 1.625rem 1.25rem;
+    }
 }
