@@ -874,14 +874,12 @@ form > input[type=submit] {
 #main_Reservation > img:nth-child(2) {
     width: 130px;
     height: auto;
-    position: absolute;
     top: 0;
     left: initial;
     right: 32px;
 }
 
 #main_Reservation > img:nth-child(3) {
-    position: absolute;
     bottom: 0;
     right: initial;
     left: 50px;
@@ -1194,6 +1192,107 @@ main {
     }
 
     /*Gallery*/
+
+    #main_Gallery {
+        margin-top: .5625rem;
+    }
+
+    /*La visite*/
+
+    #main_La-visite {
+        margin-top: .5625rem;
+    }
+
+    #main_La-visite > section:nth-child(2) {
+        text-align: initial;
+        margin: 0 .6875rem;
+        display: flex;
+    }
+
+    #main_La-visite > section:nth-child(2) > p:nth-child(2) {
+        margin: .4375rem 0 .875rem;
+    }
+
+    #main_La-visite > section:nth-child(2) > p:nth-child(3) {
+        margin: 0 0 .8125rem;
+    }
+
+    /*Spectacle*/
+
+    #main_Spectacle {
+        height: 85px;
+    }
+
+    #main_Spectacle > h2 {
+        font-size: 1.375rem;
+        /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+        /*text-shadow: 3px -3px 3px rgba(0,0,0,0.8);*/
+        /*text-shadow: 3px -3px 3px rgba(0,0,0,0.8), -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+        text-shadow: 3px -3px 3px rgba(0,0,0,0.8), -1px 0 black, 0 1px black;
+    }
+
+    /*Infos pratiques*/
+
+    #main_Informations-pratiques {
+        margin-top: .75rem;
+    }
+
+    #main_Informations-pratiques > div:first-child > section {
+        text-align: initial;
+        margin: 0 .6875rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main_Informations-pratiques > div:first-child > section > p:nth-child(2) {
+        margin: .4375rem 0 .125rem;
+    }
+
+    #main_Informations-pratiques > div:first-child > section > p:nth-child(3) {
+        margin: 0 0 .8125rem;
+        align-self: flex-end;
+    }
+
+    #main_Informations-pratiques > div:nth-child(2) {
+        height: 194px;
+    }
+
+    /*Réservation*/
+
+    #main_Reservation {
+        margin-top: .75rem;
+    }
+
+    #main_Reservation > div {
+        text-align: initial;
+    }
+
+    #main_Reservation > div > section {
+        padding: 0 .6875rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main_Reservation > div > section > p:nth-child(2) {
+        margin: .4375rem 0 .125rem;
+    }
+
+    #main_Reservation > div > section > p:nth-child(3) {
+        margin: 0 0 .4375rem;
+        align-self: flex-end;
+    }
+
+    #main_Reservation > img:nth-child(2) {
+        width: 100px;
+        top: -6px;
+        right: 12%;
+    }
+
+    #main_Reservation > img:nth-child(3) {
+        display: none;
+    }
+
+    /*FOOTER*/
 
     
 }
