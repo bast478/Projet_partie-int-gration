@@ -15,6 +15,19 @@ const burgerMenu = document.querySelector('#menu-burger');
 
 //***************************Nav mobile********************************
 const mobileNav = document.getElementById('nav-mobile');
+mobileNav.style.height = '0px';
+const mobileNavUl = document.querySelector('#nav-mobile > ul');
+let heightMobileNavUl;
+  window.addEventListener('load', (event) => {
+    heightMobileNavUl = mobileNavUl.offsetHeight;
+    console.log('hauteur de la liste nav mobile : ' + heightMobileNavUl);
+    console.log('page is fully loaded');
+  });
+
+//***************************Section infos header**********************
+const headerInfos = document.querySelectorAll('#header_infos > div');
+const headerInfosLength = headerInfos.length;
+let selected = document.querySelector('#header_infos > .selected');
 
 //***************************Gallerie Desktop**************************
 const listPictures = document.querySelectorAll('#main_Gallery > div > img');
@@ -158,9 +171,111 @@ function precNextDiapo (list, mainPicGallery, left, right) {
 burgerMenu.addEventListener('click', function() {
     burgerMenu.classList.toggle('menu-burger-change');
 
-    if (mobileNav.style.height === '') {
-        mobileNav.style.height = '318px';
+    if (mobileNav.style.height === '0px') {
+        mobileNav.style.height = `${heightMobileNavUl}px`;
     } else {
-        mobileNav.style.height = '';
+        mobileNav.style.height = '0px';
     }
+});
+
+// Carousel
+/*const headerInfosLegouffre = document.querySelector('#header_infos > div:nth-child(1)');
+const headerInfosLavisite = document.querySelector('#header_infos > div:nth-child(2)');
+const headerInfosInfospratiques = document.querySelector('#header_infos > div:nth-child(3)');
+const headerInfosReservation = document.querySelector('#header_infos > div:nth-child(4)');
+const headerInfosArray = [headerInfosLegouffre, headerInfosLavisite, headerInfosInfospratiques, headerInfosReservation];*/
+
+function moveToSelected(element) {
+    if (element === "next") {
+      selected = selected.nextElementSibling;
+    } else if (element === "prev") {
+      selected = selected.previousElementSibling;
+    } else {
+      selected = element;
+    }
+
+    let i;
+    for (i = 0; i < headerInfosLength; i++) {
+        if (selected === headerInfos[i]) {
+            break;
+        }
+    }
+
+    let next;
+    if (i+1 < headerInfosLength) {
+        next = selected.nextElementSibling;
+        next.className = '';
+        next.classList.add("next");
+    }
+
+    let prev;
+    if (i-1 >= 0) {
+        prev = selected.previousElementSibling;
+        prev.className = "";
+        prev.classList.add("prev");
+    }
+
+    let prevSecond;
+    if (i-2 >= 0) {
+        prevSecond = prev.previousElementSibling;
+        prevSecond.className = "";
+        prevSecond.classList.add("prevLeftSecond");
+    }
+
+    let nextSecond;
+    if (i+2 < headerInfosLength) {
+        nextSecond = next.nextElementSibling;
+        nextSecond.className = "";
+        nextSecond.classList.add("nextRightSecond");
+    }
+    
+    selected.className = "";
+    selected.classList.add("selected");
+
+    let lastOfNextAllIndex = (headerInfosLength - 1) - (i + 3);
+    if (lastOfNextAllIndex >= 0) {
+        for (let j = 0; j <= lastOfNextAllIndex; j++) {
+            headerInfos[i+3+j].className = "";
+            headerInfos[i+3+j].classList.add("hideRight");
+        }
+    }
+
+    let lastOfPrevAllIndex = i - 3;
+    if (lastOfPrevAllIndex >= 0) {
+        for (let j = 0; j <= lastOfPrevAllIndex; j++) {
+            headerInfos[i-3-j].className = "";
+            headerInfos[i-3-j].classList.add("hideLeft");
+        }
+    }
+  }
+  
+
+document.addEventListener('keydown', e => {
+    switch(e.key) {
+        case 'ArrowLeft': // left
+        moveToSelected('prev');
+        break;
+
+        case 'ArrowRight': // right
+        moveToSelected('next');
+        break;
+
+        default: return;
+    }
+    e.preventDefault();
+  });
+  
+
+headerInfos.forEach(div => {
+    div.addEventListener('click', function() {
+        moveToSelected(this);
+    })
+});
+
+leftArrowHeaderInfos.addEventListener('click', () => {
+    moveToSelected('prev');
+});
+
+rightArrowHeaderInfos.addEventListener('click', () => {
+    moveToSelected('next');
 });

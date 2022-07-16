@@ -88,7 +88,6 @@ header {
 #nav-mobile {
     transition: 0.4s ease-out;
     overflow: hidden;
-    height: 0;
 }
 
 #nav-mobile ul {
@@ -1334,5 +1333,11 @@ main {
 
     footer > div:nth-child(2) {
         padding: 0 1.625rem 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    #header_infos {
+        display: block;
     }
 }
