@@ -1352,8 +1352,17 @@ main {
 }
 
 @media only screen and (max-width: 245px) {
+
+    .links-title-bar {
+        font-size: 1.875rem;
+    }
+
     .secondary_button {
         font-size: initial;
+    }
+
+    header > p {
+        font-size: 2.1875rem;
     }
 
     form > input[type="email"] {
