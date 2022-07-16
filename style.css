@@ -1052,6 +1052,11 @@ main {
 }
 
 @media only screen and (max-width: 680px) {
+
+    .footer_text {
+        overflow-wrap: anywhere;
+    }
+
     footer > div:nth-child(2){
         flex-direction: column;
         align-items: center;
@@ -1062,6 +1067,10 @@ main {
         margin: 1.3125rem 0;
         row-gap: initial;
         column-gap: 1.5rem;
+    }
+
+    address {
+        width: initial;
     }
 
     form {
@@ -1339,5 +1348,19 @@ main {
 @media only screen and (max-width: 380px) {
     #header_infos {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 245px) {
+    .secondary_button {
+        font-size: initial;
+    }
+
+    form > input[type="email"] {
+        width: 100%;
+    }
+
+    form > input[type="submit"] {
+        font-size: initial;
     }
 }
