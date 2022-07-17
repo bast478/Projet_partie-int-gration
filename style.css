@@ -1057,6 +1057,22 @@ main {
 
 @media only screen and (max-width: 680px) {
 
+    .gallery-top {
+        padding: 0;
+    }
+
+    .gallery-bottom {
+        padding: 0;
+    }
+
+    .displayNone {
+        display: none;
+    }
+
+    .displayNone.displayBlock {
+        display: block;
+    }
+
     .footer_text {
         overflow-wrap: anywhere;
     }
@@ -1079,6 +1095,18 @@ main {
 
     form {
         width: initial;
+    }
+
+    #main_Gallery {
+        display: block;
+    }
+
+    #main_Gallery > div > img {
+        object-fit: contain;
+    }
+
+    #grid_main-item > svg {
+        display: none;
     }
 }
 

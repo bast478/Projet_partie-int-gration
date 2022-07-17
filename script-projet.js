@@ -40,6 +40,8 @@ const mainPicture = document.querySelector('#grid_main-item > img');
 const arrow = document.querySelector('#grid_main-item > svg');
 const modal = document.querySelector('#modal');
 
+const divsMainGallery = document.querySelectorAll('#main_Gallery > div');
+
 //------Modal dans la gallerie--------
 const divGridModal = document.createElement('DIV');
 divGridModal.setAttribute('id', 'gridModal');
@@ -183,11 +185,6 @@ burgerMenu.addEventListener('click', function() {
 });
 
 // Carousel
-/*const headerInfosLegouffre = document.querySelector('#header_infos > div:nth-child(1)');
-const headerInfosLavisite = document.querySelector('#header_infos > div:nth-child(2)');
-const headerInfosInfospratiques = document.querySelector('#header_infos > div:nth-child(3)');
-const headerInfosReservation = document.querySelector('#header_infos > div:nth-child(4)');
-const headerInfosArray = [headerInfosLegouffre, headerInfosLavisite, headerInfosInfospratiques, headerInfosReservation];*/
 
 function moveToSelected(element) {
 
@@ -294,3 +291,17 @@ leftArrowHeaderInfos.addEventListener('click', () => {
 rightArrowHeaderInfos.addEventListener('click', () => {
     moveToSelected('next');
 });
+
+// Defilement automatique gallerie
+const divsMainGalleryLength = divsMainGallery.length;
+/*for (i=0; i < divsMainGalleryLength; i++) {
+    if (divsMainGallery[i].classList === 'block') {
+        break;
+    }
+}*/
+
+/*while (window.innerWidth <= '680') {
+    setInterval(function () {
+        
+    }, 3000);
+}*/
