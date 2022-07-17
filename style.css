@@ -242,6 +242,10 @@ header > p:nth-child(4) {
     display: inline-block;
 }
 
+#header_infos-buttons {
+    display: none;
+}
+
 /*MAIN*/
 
 /*Le gouffre*/
@@ -1415,6 +1419,7 @@ main {
       }
 
     #header_infos-buttons {
+        display: block;
         margin-bottom: .5625rem;
         text-align: center;
     }
