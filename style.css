@@ -1348,6 +1348,91 @@ main {
 @media only screen and (max-width: 380px) {
     #header_infos {
         display: block;
+        position: relative;
+        height: 243px;
+        overflow: hidden;
+        margin: 0 0 .25rem;
+    }
+
+    #header_infos > div {
+        position: absolute;
+        transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+        opacity: 1;
+        width: 180px;
+        height: 243px;
+    }
+
+    #header_infos > div > p:nth-child(2) {
+        margin: 2.625rem 0 1rem;
+    }
+
+    #header_infos > div:nth-child(3) > p:nth-child(2) {
+        margin: .6875rem 0 1rem;
+    }
+
+    #header_infos > div.hideLeft {
+        left: 0%;
+        opacity: 0;
+        transform: translateY(0) translateX(-50%);
+    }
+
+    #header_infos > div.hideRight {
+        left: 100%;
+        opacity: 0;
+        transform: translateY(0) translateX(-50%);
+    }
+
+    #header_infos > div.prev {
+        z-index: 5;
+        left: 30%;
+        transform: translateY(0) translateX(-50%);
+    }
+
+    #header_infos > div.prevLeftSecond {
+        z-index: 4;
+        left: 15%;
+        transform: translateY(0) translateX(-50%);
+        opacity: 0.7;
+    }
+
+    #header_infos > div.selected {
+        z-index: 10;
+        left: 50%;
+        transform: translateY(0) translateX(-50%);
+    }
+
+      #header_infos > div.next {
+        z-index: 5;
+        left: 70%;
+        transform: translateY(0) translateX(-50%);
+    }
+
+    #header_infos > div.nextRightSecond {
+        z-index: 4;
+        left: 85%;
+        transform: translateY(0) translateX(-50%);
+        opacity: 0.7;
+      }
+
+    #header_infos-buttons {
+        margin-bottom: .5625rem;
+        text-align: center;
+    }
+
+    #header_infos-buttons .prev, #header_infos-buttons .next {
+        font-size: 1.625rem;
+        border: none;
+        /*box-sizing: border-box;*/
+        padding: 0 2rem;
+        background-color: #f5f5f5;
+    }
+
+    #header_infos-buttons .prev {
+        margin-right: .3125rem;
+    }
+
+    #header_infos-buttons .next {
+        margin-left: .3125rem;
     }
 }
 

@@ -18,7 +18,7 @@ const mobileNav = document.getElementById('nav-mobile');
 mobileNav.style.height = '0px';
 const mobileNavUl = document.querySelector('#nav-mobile > ul');
 let heightMobileNavUl;
-  window.addEventListener('load', (event) => {
+  window.addEventListener('load', () => {
     heightMobileNavUl = mobileNavUl.offsetHeight;
     console.log('hauteur de la liste nav mobile : ' + heightMobileNavUl);
     console.log('page is fully loaded');
@@ -28,6 +28,10 @@ let heightMobileNavUl;
 const headerInfos = document.querySelectorAll('#header_infos > div');
 const headerInfosLength = headerInfos.length;
 let selected = document.querySelector('#header_infos > .selected');
+
+//---------------------------Bouttons infos header---------------------
+const leftArrowHeaderInfos = document.querySelector('#header_infos-buttons .prev');
+const rightArrowHeaderInfos = document.querySelector('#header_infos-buttons .next');
 
 //***************************Gallerie Desktop**************************
 const listPictures = document.querySelectorAll('#main_Gallery > div > img');
@@ -186,15 +190,26 @@ const headerInfosReservation = document.querySelector('#header_infos > div:nth-c
 const headerInfosArray = [headerInfosLegouffre, headerInfosLavisite, headerInfosInfospratiques, headerInfosReservation];*/
 
 function moveToSelected(element) {
-    if (element === "next") {
-      selected = selected.nextElementSibling;
-    } else if (element === "prev") {
-      selected = selected.previousElementSibling;
-    } else {
-      selected = element;
-    }
 
     let i;
+    for (i = 0; i < headerInfosLength; i++) {
+        if (selected === headerInfos[i]) {
+            break;
+        }
+    }
+
+    if (element !== "next" && element !== "prev") {
+        selected = element;
+    } else if (element === "next" && i+1 < headerInfosLength) {
+        selected = selected.nextElementSibling;
+    } else if (element === "prev" && i-1 >= 0) {
+        selected = selected.previousElementSibling;
+    } else if (i+1 >= headerInfosLength) {
+        return;
+    } else if (i-1 < 0) {
+        return;
+    }
+
     for (i = 0; i < headerInfosLength; i++) {
         if (selected === headerInfos[i]) {
             break;
@@ -247,16 +262,16 @@ function moveToSelected(element) {
             headerInfos[i-3-j].classList.add("hideLeft");
         }
     }
-  }
+}
   
 
 document.addEventListener('keydown', e => {
     switch(e.key) {
-        case 'ArrowLeft': // left
+        case 'ArrowLeft':
         moveToSelected('prev');
         break;
 
-        case 'ArrowRight': // right
+        case 'ArrowRight':
         moveToSelected('next');
         break;
 
