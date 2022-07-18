@@ -9,6 +9,7 @@ function setAttributes(el, attrs) {
 // CREATION DES VARIABLES ET ELEMENTS
 
 const svgNS = "http://www.w3.org/2000/svg";
+let i;
 
 //***************************Menu burger*******************************
 const burgerMenu = document.querySelector('#menu-burger');
@@ -42,6 +43,7 @@ const arrow = document.querySelector('#grid_main-item > svg');
 const modal = document.querySelector('#modal');
 
 const divsMainGallery = document.querySelectorAll('#main_Gallery > div');
+const divsMainGalleryLength = divsMainGallery.length;
 
 //------Modal dans la gallerie--------
 const divGridModal = document.createElement('DIV');
@@ -294,10 +296,9 @@ rightArrowHeaderInfos.addEventListener('click', () => {
 });
 
 // Defilement automatique galerie
-const divsMainGalleryLength = divsMainGallery.length;
-let i;
+
 for (i=0; i < divsMainGalleryLength; i++) {
-    if (divsMainGallery[i].classList.contains('displayBlock')) {
+    if (divsMainGallery[i].classList.contains('show-photo-gallery')) {
         break;
     }
 }
@@ -309,16 +310,14 @@ if (window.innerWidth <= '680') {
     setInterval(function () {
         console.log(i);
         if (i < divsMainGalleryLength) {
-            divsMainGallery[i-1].classList.remove('displayBlock');
-            divsMainGallery[i].classList.add('displayBlock');
+            divsMainGallery[i-1].classList.remove('show-photo-gallery');
+            divsMainGallery[i].classList.add('show-photo-gallery');
             i++;
         } else {
             i = 0; 
-            divsMainGallery[divsMainGalleryLength-1].classList.remove('displayBlock');
-            divsMainGallery[i].classList.add('displayBlock');
+            divsMainGallery[divsMainGalleryLength-1].classList.remove('show-photo-gallery');
+            divsMainGallery[i].classList.add('show-photo-gallery');
             i++;
         }
     }, 4000);
 }
-
-console.log(Math.ceil(680/1.58));

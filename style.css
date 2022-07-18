@@ -1114,14 +1114,12 @@ main {
         padding: 0;
     }
 
-    .displayNone {
+    .hide-photo-gallery {
         height: 0;
         opacity: 0.6;
     }
 
-    .displayNone.displayBlock {
-        /*height: 204px;*/
-        /*height: 430px;*/
+    .hide-photo-gallery.show-photo-gallery {
         height: 100%;
         opacity: 1;
     }
