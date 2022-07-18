@@ -1057,63 +1057,12 @@ main {
 
 @media only screen and (max-width: 680px) {
 
-    .gallery-top {
-        padding: 0;
-    }
-
-    .gallery-bottom {
-        padding: 0;
-    }
-
-    .displayNone {
-        display: none;
-    }
-
-    .displayNone.displayBlock {
-        display: block;
-    }
-
-    .footer_text {
-        overflow-wrap: anywhere;
-    }
-
-    footer > div:nth-child(2){
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #social-networks {
-        flex-direction: row;
-        margin: 1.3125rem 0;
-        row-gap: initial;
-        column-gap: 1.5rem;
-    }
-
-    address {
-        width: initial;
-    }
-
-    form {
-        width: initial;
-    }
-
-    #main_Gallery {
-        display: block;
-    }
-
-    #main_Gallery > div > img {
-        object-fit: contain;
-    }
-
-    #grid_main-item > svg {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 609px) {
-
     #logo {
         width: 135px;
+    }
+
+    #nav-desktop {
+        padding: .9375rem .9375rem .5625rem;
     }
 
     #nav-desktop > a:not(a:first-child), #nav-desktop > div:nth-child(2) {
@@ -1156,12 +1105,82 @@ main {
         font-size: 2.8125rem;
     }
 
+
+    .gallery-top {
+        padding: 0;
+    }
+
+    .gallery-bottom {
+        padding: 0;
+    }
+
+    .displayNone {
+        height: 0px;
+        opacity: 0.6;
+        transform: translateX(-204px);
+    }
+
+    .displayNone.displayBlock {
+        /*height: 204px;*/
+        height: 430px;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    .footer_text {
+        overflow-wrap: anywhere;
+    }
+
+    footer > div:nth-child(2){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #social-networks {
+        flex-direction: row;
+        margin: 1.3125rem 0;
+        row-gap: initial;
+        column-gap: 1.5rem;
+    }
+
+    address {
+        width: initial;
+    }
+
+    form {
+        width: initial;
+    }
+
+    #main_Gallery {
+        display: block;
+        background-color: black;
+    }
+
+    #main_Gallery > div {
+        transition: opacity 1s;
+    }
+
+    #main_Gallery > div > img {
+        object-fit: cover;
+    }
+
+    #grid_main-item > svg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 609px) {
+
     #header_infos > div:last-child > p:nth-child(2) {
         margin: 3.5rem 0 1.75rem;
     }
 }
 
 @media only screen and (max-width: 475px) {
+
+    #logo {
+        width: 125px;
+    }
 
     .main_titles {
         font-size: 1.8125rem;
@@ -1243,16 +1262,20 @@ main {
 
     /*MAIN*/
 
+    main {
+        margin-top: .625rem;
+    }
+
     /*Le gouffre*/
 
     #main_Le-gouffre > section:first-child {
-        margin: 0 .6875rem;
+        margin: 0 1.25rem;
         text-align: initial;
         display: flex;
     }
 
     #main_Le-gouffre > section:first-child > p:nth-child(2) {
-        margin: .4375rem 0 1.1875rem;
+        margin: 1.25rem 0;
     }
 
     #main_Le-gouffre > section:first-child > p:nth-child(3) {
@@ -1266,27 +1289,27 @@ main {
     /*Gallery*/
 
     #main_Gallery {
-        margin-top: .5625rem;
+        margin-top: .9375rem;
     }
 
     /*La visite*/
 
     #main_La-visite {
-        margin-top: .5625rem;
+        margin-top: .9375rem;
     }
 
     #main_La-visite > section:nth-child(2) {
         text-align: initial;
-        margin: 0 .6875rem;
+        margin: 0 1.25rem;
         display: flex;
     }
 
     #main_La-visite > section:nth-child(2) > p:nth-child(2) {
-        margin: .4375rem 0 .875rem;
+        margin: 1.25rem 0;
     }
 
     #main_La-visite > section:nth-child(2) > p:nth-child(3) {
-        margin: 0 0 .8125rem;
+        margin: 0 0 .9375rem;
     }
 
     /*Spectacle*/
@@ -1306,22 +1329,22 @@ main {
     /*Infos pratiques*/
 
     #main_Informations-pratiques {
-        margin-top: .75rem;
+        margin-top: .9375rem;
     }
 
     #main_Informations-pratiques > div:first-child > section {
         text-align: initial;
-        margin: 0 .6875rem;
+        margin: 0 1.25rem;
         display: flex;
         flex-direction: column;
     }
 
     #main_Informations-pratiques > div:first-child > section > p:nth-child(2) {
-        margin: .4375rem 0 .125rem;
+        margin: 1.25rem 0;
     }
 
     #main_Informations-pratiques > div:first-child > section > p:nth-child(3) {
-        margin: 0 0 .8125rem;
+        margin: 0 0 .9375rem;
         align-self: flex-end;
     }
 
@@ -1332,7 +1355,7 @@ main {
     /*Réservation*/
 
     #main_Reservation {
-        margin-top: .75rem;
+        margin-top: .9375rem;
     }
 
     #main_Reservation > div {
@@ -1340,17 +1363,17 @@ main {
     }
 
     #main_Reservation > div > section {
-        padding: 0 .6875rem;
+        padding: 0 1.25rem;
         display: flex;
         flex-direction: column;
     }
 
     #main_Reservation > div > section > p:nth-child(2) {
-        margin: .4375rem 0 .125rem;
+        margin: 1.25rem 0;
     }
 
     #main_Reservation > div > section > p:nth-child(3) {
-        margin: 0 0 .4375rem;
+        margin: 0 0 .9375rem;
         align-self: flex-end;
     }
 
@@ -1378,6 +1401,22 @@ main {
 }
 
 @media only screen and (max-width: 380px) {
+
+    .menu-burger-bar1, .menu-burger-bar2, .menu-burger-bar3 {
+        width: 35px;
+        height: 2px;
+    }
+
+    .menu-burger-change .menu-burger-bar1 {
+        height: 3px;
+        transform: rotate(45deg) translate(1px, 3px);
+    }
+
+    .menu-burger-change .menu-burger-bar3 {
+        height: 3px;
+        transform: rotate(-45deg) translate(1px, -3px);
+    }
+
     #header_infos {
         display: block;
         position: relative;
@@ -1466,6 +1505,12 @@ main {
 
     #header_infos-buttons .next {
         margin-left: .3125rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #nav-desktop {
+        padding: .6875rem .6875rem .5625rem;
     }
 }
 

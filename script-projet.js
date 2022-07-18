@@ -292,16 +292,31 @@ rightArrowHeaderInfos.addEventListener('click', () => {
     moveToSelected('next');
 });
 
-// Defilement automatique gallerie
+// Defilement automatique galerie
 const divsMainGalleryLength = divsMainGallery.length;
-/*for (i=0; i < divsMainGalleryLength; i++) {
-    if (divsMainGallery[i].classList === 'block') {
+let i;
+for (i=0; i < divsMainGalleryLength; i++) {
+    if (divsMainGallery[i].classList.contains('displayBlock')) {
         break;
     }
-}*/
+}
 
-/*while (window.innerWidth <= '680') {
+/*if (window.innerWidth <= '680') {
+    let heightResponsiveDivsGallery = Math.ceil(window.innerWidth/1.58);
+
     setInterval(function () {
-        
+        console.log(i);
+        if (i < divsMainGalleryLength) {
+            divsMainGallery[i-1].classList.remove('displayBlock');
+            divsMainGallery[i].classList.add('displayBlock');
+            i++;
+        } else {
+            i = 0; 
+            divsMainGallery[divsMainGalleryLength-1].classList.remove('displayBlock');
+            divsMainGallery[i].classList.add('displayBlock');
+            i++;
+        }
     }, 3000);
 }*/
+
+console.log(Math.ceil(680/1.58));
