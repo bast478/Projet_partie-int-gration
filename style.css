@@ -1115,16 +1115,15 @@ main {
     }
 
     .displayNone {
-        height: 0px;
+        height: 0;
         opacity: 0.6;
-        transform: translateX(-204px);
     }
 
     .displayNone.displayBlock {
         /*height: 204px;*/
-        height: 430px;
+        /*height: 430px;*/
+        height: 100%;
         opacity: 1;
-        transform: translateX(0px);
     }
 
     .footer_text {
@@ -1173,6 +1172,12 @@ main {
 
     #header_infos > div:last-child > p:nth-child(2) {
         margin: 3.5rem 0 1.75rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #main_Reservation > img:nth-child(2) {
+        right: 6px;
     }
 }
 
@@ -1506,12 +1511,36 @@ main {
     #header_infos-buttons .next {
         margin-left: .3125rem;
     }
+
+    /*MAIN*/
+
+    /*Le gouffre*/
+
+    #main_Le-gouffre > div:nth-child(2) {
+        height: 190px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    #main_Reservation > img:nth-child(2) {
+        right: 4%;
+    }
 }
 
 @media only screen and (max-width: 300px) {
     #nav-desktop {
         padding: .6875rem .6875rem .5625rem;
     }
+
+    #main_Reservation > img:nth-child(2) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 299px) {
+#main_Le-gouffre > div:nth-child(2) {
+    height: 152px;
+}
 }
 
 @media only screen and (max-width: 245px) {
