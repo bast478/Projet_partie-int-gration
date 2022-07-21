@@ -526,6 +526,11 @@ footer {
     /*height: 30.104vw;*/
 }
 
+footer a { /*Pour Iphone*/
+    text-decoration: none;
+    color: white;
+}
+
 #footer_stalagmites {
     height: 70px;
     /* height: 3.646vw; */
@@ -544,11 +549,6 @@ footer > div:nth-child(2) {
 address {
     font-style: normal;
     color: white;
-}
-
-address > p:nth-child(2) { /*Pour Iphone*/
-    color: white;
-    text-decoration: none;
 }
 
 address > :not(p:nth-child(4)) {
@@ -591,6 +591,7 @@ form {
 }
 
 form > input[type=email]{
+    padding: .4375rem;
     width: 15.521vw;
     height: 1.979vw;
     border: none;
@@ -615,9 +616,14 @@ form > input[type=submit] {
     width: 9.427vw;
     height: 2.396vw;
     margin-top: 1.094vw;
+    -webkit-appearance: none;
 }
 
 @media only screen and (max-width: 1200px) {
+
+    header {
+        background: url("pictures/Gouffre_de_Poudrey_2010_1200px.jpg") center top;
+    }
     
     /*Section infos header*/
     
@@ -641,6 +647,10 @@ form > input[type=submit] {
     #header_infos > div > p > a {
         font-size: 1.0625rem;
         padding: 5px 10px;
+    }
+
+    footer {
+        background: url('pictures/Gouffre_de_Poudrey_2010_1200px.jpg') center bottom;
     }
 }
 
@@ -918,7 +928,6 @@ footer > div:nth-child(2) {
 
 address {
     text-align: center;
-    width: min-content;
 }
 
 address > p:nth-child(2) {
@@ -992,6 +1001,10 @@ form > input[type=submit] {
 
 @media only screen and (max-width: 780px) {
 
+    header {
+        background: url("pictures/Gouffre_de_Poudrey_2010_780px.jpg") center top;
+    }
+
     /*Section infos header*/
     
      /*#header_infos > div {
@@ -1058,6 +1071,26 @@ main {
 
 #main_Reservation > div > section {
     padding: 0 3.3125rem;
+}
+
+footer {
+    background: url('pictures/Gouffre_de_Poudrey_2010_780px.jpg') center bottom;
+}
+
+footer > div:nth-child(2){
+    flex-direction: column;
+    align-items: center;
+}
+
+#social-networks {
+    flex-direction: row;
+    margin: 1.3125rem 0;
+    row-gap: initial;
+    column-gap: 1.5rem;
+}
+
+form {
+    width: initial;
 }
 
 }
@@ -1131,26 +1164,6 @@ main {
         opacity: 1;
     }
 
-    footer > div:nth-child(2){
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #social-networks {
-        flex-direction: row;
-        margin: 1.3125rem 0;
-        row-gap: initial;
-        column-gap: 1.5rem;
-    }
-
-    address {
-        width: initial;
-    }
-
-    form {
-        width: initial;
-    }
-
     #main_Gallery {
         display: block;
         background-color: black;
@@ -1183,6 +1196,10 @@ main {
 }
 
 @media only screen and (max-width: 475px) {
+
+    header {
+        background: url("pictures/Gouffre_de_Poudrey_2010_475px.jpg") center top;
+    }
 
     #logo {
         width: 125px;
@@ -1275,17 +1292,13 @@ main {
     /*Le gouffre*/
 
     #main_Le-gouffre > section:first-child {
-        margin: 0 1.25rem;
+        margin: 0 1.25rem .9375rem;
         text-align: initial;
         display: flex;
     }
 
     #main_Le-gouffre > section:first-child > p:nth-child(2) {
         margin: 1.25rem 0;
-    }
-
-    #main_Le-gouffre > section:first-child > p:nth-child(3) {
-        margin-bottom: .5625rem;
     }
 
     #main_Le-gouffre > div:nth-child(2) {
@@ -1301,7 +1314,7 @@ main {
     /*La visite*/
 
     #main_La-visite {
-        margin-top: .9375rem;
+        margin-top: .9375rem 0 1.25rem;
     }
 
     #main_La-visite > section:nth-child(2) {
@@ -1312,10 +1325,6 @@ main {
 
     #main_La-visite > section:nth-child(2) > p:nth-child(2) {
         margin: 1.25rem 0;
-    }
-
-    #main_La-visite > section:nth-child(2) > p:nth-child(3) {
-        margin: 0 0 .9375rem;
     }
 
     /*Spectacle*/
@@ -1335,7 +1344,7 @@ main {
     /*Infos pratiques*/
 
     #main_Informations-pratiques {
-        margin-top: .9375rem;
+        margin-top: 1.25rem;
     }
 
     #main_Informations-pratiques > div:first-child > section {
@@ -1394,6 +1403,10 @@ main {
     }
 
     /*FOOTER*/
+
+    footer {
+        background: url('pictures/Gouffre_de_Poudrey_2010_475px.jpg') center bottom;
+    }
 
     #footer_stalagmites {
         background-image: url('pictures/footer_stalagmites_mobile.svg');

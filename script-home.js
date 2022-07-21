@@ -151,7 +151,6 @@ function precNextDiapo (list, mainPicGallery, left, right) {
     let i;
     for (i=0; i < list.length; i++) {
         if (mainPicGallery.src === list[i].src) {
-            console.log('main.src égal à', list[i].src);
             break;
         }
     }
@@ -308,7 +307,6 @@ if (window.innerWidth <= '680') {
     mainGallery.style.height = `${heightResponsiveDivsGallery}px`;
 
     setInterval(function () {
-        console.log(i);
         if (i < divsMainGalleryLength) {
             divsMainGallery[i-1].classList.remove('show-photo-gallery');
             divsMainGallery[i].classList.add('show-photo-gallery');
