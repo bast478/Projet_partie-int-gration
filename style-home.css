@@ -546,6 +546,11 @@ address {
     color: white;
 }
 
+address > p:nth-child(2) { /*Pour Iphone*/
+    color: white;
+    text-decoration: none;
+}
+
 address > :not(p:nth-child(4)) {
     text-shadow: -.06vw -.25vw .15vw black;
 }
@@ -592,6 +597,8 @@ form > input[type=email]{
     outline: none;
     box-sizing: border-box;
     background-color: #f5f5f5;
+    border-radius: 0; /*Pour Iphone*/
+    /* ou -webkit-appearance: none;*/
 }
 
 form > input[type=submit] {
@@ -608,7 +615,6 @@ form > input[type=submit] {
     width: 9.427vw;
     height: 2.396vw;
     margin-top: 1.094vw;
-    -webkit-appearance: none;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1125,10 +1131,6 @@ main {
         opacity: 1;
     }
 
-    .footer_text {
-        overflow-wrap: anywhere;
-    }
-
     footer > div:nth-child(2){
         flex-direction: column;
         align-items: center;
@@ -1496,6 +1498,7 @@ main {
     }
 
     #header_infos-buttons .prev, #header_infos-buttons .next {
+        color: black;
         font-size: 1.625rem;
         border: none;
         /*box-sizing: border-box;*/
