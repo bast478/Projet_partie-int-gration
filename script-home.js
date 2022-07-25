@@ -35,7 +35,7 @@ const leftArrowHeaderInfos = document.querySelector('#header_infos-buttons .prev
 const rightArrowHeaderInfos = document.querySelector('#header_infos-buttons .next');
 
 //***************************Gallerie Desktop**************************
-const mainGallery = document.querySelector('#main_Gallery');
+//const mainGallery = document.querySelector('#main_Gallery');
 const listPictures = document.querySelectorAll('#main_Gallery > div > img');
 const listMinPictures = document.querySelectorAll('#main_Gallery > div:not(#grid_main-item) > img'); //Miniatures
 const mainPicture = document.querySelector('#grid_main-item > img');
@@ -303,8 +303,8 @@ for (i=0; i < divsMainGalleryLength; i++) {
 }
 
 if (window.innerWidth <= '680') {
-    let heightResponsiveDivsGallery = Math.ceil(window.innerWidth/1.58);
-    mainGallery.style.height = `${heightResponsiveDivsGallery}px`;
+    //let heightResponsiveDivsGallery = Math.ceil(window.innerWidth/1.58);
+    //mainGallery.style.height = `${heightResponsiveDivsGallery}px`;
 
     setInterval(function () {
         if (i < divsMainGalleryLength) {
