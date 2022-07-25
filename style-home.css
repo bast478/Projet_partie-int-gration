@@ -69,7 +69,7 @@ body {
 /*HEADER*/
 
 header {
-    background: url("pictures/Gouffre_de_Poudrey_2010.webp") center top;
+    background: url("pictures/gallery_pic_3.webp") center top;
     /*height: 67.9375rem;*/
     position: relative;
 }
@@ -528,7 +528,7 @@ main {
 /*FOOTER*/
 
 footer {
-    background: url('pictures/Gouffre_de_Poudrey_2010.webp') center bottom;
+    background: url('pictures/gallery_pic_3.webp') center bottom;
     /*height: 30.104vw;*/
 }
 
@@ -944,10 +944,6 @@ form > input[type=submit] {
 }
 
 /*FOOTER*/
-
-footer {
-    background: url('pictures/Gouffre_de_Poudrey_2010.webp') center bottom;
-}
 
 #footer_stalagmites {
     height: 23px;

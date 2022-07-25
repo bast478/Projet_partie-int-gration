@@ -1,0 +1,12 @@
+h1, form :not(input[type="submit"]) {
+    font-family: 'Changa One', cursive;
+}
+
+input[type="submit"] {
+    font-family: 'Kanit', sans-serif;
+}
+
+main {
+    background-image: url('pictures/gallery_pic_3.webp');
+    height: 100vh;
+}
