@@ -69,7 +69,7 @@ body {
 /*HEADER*/
 
 header {
-    background: url("pictures/Gouffre_de_Poudrey_2010.jpg") center top;
+    background: url("pictures/Gouffre_de_Poudrey_2010.webp") center top;
     /*height: 67.9375rem;*/
     position: relative;
 }
@@ -423,7 +423,7 @@ main {
 /*Spectacle*/
 
 #main_Spectacle {
-    background: url("pictures/main_spectacle.jpg") center/cover;
+    background: url("pictures/main_spectacle.webp") center/cover;
     height: 11vw;
     color: white;
     display: flex;
@@ -528,7 +528,7 @@ main {
 /*FOOTER*/
 
 footer {
-    background: url('pictures/Gouffre_de_Poudrey_2010.jpg') center bottom;
+    background: url('pictures/Gouffre_de_Poudrey_2010.webp') center bottom;
     /*height: 30.104vw;*/
 }
 
@@ -638,7 +638,7 @@ form > input[type=submit] {
     }
 
     header {
-        background: url("pictures/Gouffre_de_Poudrey_2010_1200px.jpg") center top;
+        background: url("pictures/Gouffre_de_Poudrey_2010_1200px.webp") center top;
     }
     
     /*Section infos header*/
@@ -663,7 +663,7 @@ form > input[type=submit] {
     }
 
     footer {
-        background: url('pictures/Gouffre_de_Poudrey_2010_1200px.jpg') center bottom;
+        background: url('pictures/Gouffre_de_Poudrey_2010_1200px.webp') center bottom;
     }
 }
 
@@ -946,7 +946,7 @@ form > input[type=submit] {
 /*FOOTER*/
 
 footer {
-    background: url('pictures/Gouffre_de_Poudrey_2010.jpg') center bottom;
+    background: url('pictures/Gouffre_de_Poudrey_2010.webp') center bottom;
 }
 
 #footer_stalagmites {
@@ -1036,7 +1036,7 @@ form > input[type=submit] {
 @media only screen and (max-width: 780px) {
 
     header {
-        background: url("pictures/Gouffre_de_Poudrey_2010_780px.jpg") center top;
+        background: url("pictures/Gouffre_de_Poudrey_2010_780px.webp") center top;
     }
 
     /*Section infos header*/
@@ -1104,7 +1104,7 @@ main {
 }
 
 footer {
-    background: url('pictures/Gouffre_de_Poudrey_2010_780px.jpg') center bottom;
+    background: url('pictures/Gouffre_de_Poudrey_2010_780px.webp') center bottom;
 }
 
 footer > div:nth-child(2){
@@ -1229,7 +1229,7 @@ form {
 @media only screen and (max-width: 475px) {
 
     header {
-        background: url("pictures/Gouffre_de_Poudrey_2010_475px.jpg") center top;
+        background: url("pictures/Gouffre_de_Poudrey_2010_475px.webp") center top;
     }
 
     #logo {
@@ -1449,7 +1449,7 @@ form {
     /*FOOTER*/
 
     footer {
-        background: url('pictures/Gouffre_de_Poudrey_2010_475px.jpg') center bottom;
+        background: url('pictures/Gouffre_de_Poudrey_2010_475px.webp') center bottom;
     }
 
     #footer_stalagmites {
