@@ -204,6 +204,11 @@ header > p:nth-child(4) {
     border-radius: 0.521vw;
     /*box-shadow: .4375rem .375rem .25rem rgba(0,0,0,0.33);*/
     box-shadow: 0.365vw 0.313vw 0.208vw rgba(0,0,0,0.33);
+    transition: background-color 0.5s ease-out;
+}
+
+#header_infos > div:hover {
+    background-color: rgba(42, 21, 11, 0.7);
 }
 
 #header_infos > div > h2 {
