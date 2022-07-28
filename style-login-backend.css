@@ -88,6 +88,14 @@ input[type="submit"]:hover {
         margin: 0 0 7.5rem;
     }
 
+    label {
+        font-size: 29px;
+    }
+
+    input {
+        font-size: 26px;
+    }
+
     input[type="submit"] {
         margin: 2.8125rem auto 0;
     }
@@ -100,11 +108,11 @@ input[type="submit"]:hover {
     }
 
     label {
-        font-size: 29px;
+        font-size: 28px;
     }
 
     input {
-        font-size: 26px;
+        font-size: 25px;
     }
 }
 
@@ -134,6 +142,14 @@ input[type="submit"]:hover {
         font-size: 3.75rem;
         padding: 0 3.4375rem;
     }
+
+    label {
+        font-size: 25px;
+    }
+
+    input {
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 589px) {
@@ -142,13 +158,12 @@ input[type="submit"]:hover {
     }
 
     label {
-        font-size: 26px;
         margin-bottom: 18px;
     }
 
-    input {
+    /*input {
         font-size: 1.25rem;
-    }
+    }*/
 
     input[type="text"] {
         margin-bottom: 35px;
@@ -156,7 +171,7 @@ input[type="submit"]:hover {
 
     input[type="submit"] {
         margin: 30px auto 0;
-        font-size: 22px;
+        /*font-size: 22px;*/
     }
 }
 
@@ -177,6 +192,14 @@ input[type="submit"]:hover {
         padding: 0 35px;
         margin: 0 0 85px;
     }
+
+    /*label {
+        font-size: 23px; /*21-18/25-20 f-size pour min max label et input*//*
+    }
+
+    input {
+        font-size: 19px;
+    }*/
 }
 
 @media (max-width: 417px) {
