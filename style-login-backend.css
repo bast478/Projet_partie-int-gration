@@ -93,7 +93,7 @@ input[type="submit"]:hover {
     }
 }
 
-@media (max-width: 879px) {
+@media (max-width: 896px) {
     h1 {
         font-size: 75px;
         padding: 0 80px;
@@ -123,20 +123,20 @@ input[type="submit"]:hover {
     }
 }
 
-@media (max-width: 664px) {
+@media (max-width: 681px) {
     h1 {
         font-size: 4rem;
     }
 }
 
-@media (max-width: 633px) {
+@media (max-width: 650px) {
     h1 {
         font-size: 3.75rem;
         padding: 0 3.4375rem;
     }
 }
 
-@media (max-width: 572px) {
+@media (max-width: 589px) {
     h1 {
         font-size: 55px;
     }
@@ -160,7 +160,7 @@ input[type="submit"]:hover {
     }
 }
 
-@media (max-width: 534px) {
+@media (max-width: 551px) {
     main {
         padding: 60px 0 36px;
     }
@@ -171,7 +171,7 @@ input[type="submit"]:hover {
     }
 }
 
-@media (max-width: 465px) {
+@media (max-width: 482px) {
     h1 {
         font-size: 45px;
         padding: 0 35px;
