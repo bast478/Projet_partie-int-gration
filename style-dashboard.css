@@ -1,0 +1,144 @@
+body {
+    background-color: #f5f5f5;
+}
+
+h1 {
+    font-weight: 400;
+    font-family: 'Changa One', cursive;
+    font-size: 4rem;
+    margin: 0 3.75rem 0 0;
+    padding-bottom: .875rem;
+}
+
+body > div {
+    display: flex;
+    align-items: flex-end;
+    padding: 5.3125rem 5.0625rem 0 7.1875rem;
+}
+
+body > div > div {
+    display: flex;
+    margin-top: .9375rem;
+}
+
+button, thead {
+    font-family: 'Kanit', sans-serif;
+}
+
+button {
+    font-weight: 500;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    height: 100%;
+}
+
+#button-CSV {
+    margin: 0 1.375rem 0 0;
+    background-color: #C9AA6E;
+    padding: .8125rem .75rem;
+}
+
+#button-CSV:hover {
+    background-color: #97744C;
+}
+
+#button-deconnect {
+    background-color: #AF272B;
+    padding: 1rem .9375rem;
+}
+
+#button-deconnect:hover {
+    background-color: #8B1F22;
+}
+
+table {
+    margin: 6.25rem auto 0;
+    border-spacing: 1.875rem .25rem;
+}
+
+thead {
+    font-size: 32px;
+}
+
+@media (max-width: 1723px) {
+    body > div {
+        display: block;
+        padding: 5.3125rem 7.1875rem 0;
+        width: fit-content;
+    }
+
+    body > div > div {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    h1 {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1270px) {
+    h1 {
+        text-align: center;
+    }
+
+    body > div {
+        width: initial;
+        padding: 4.6875rem 4.0625rem 0;
+    }
+
+    body > div > div {
+        justify-content: center;
+        margin-top: 1.5625rem;
+    }
+}
+
+@media (max-width: 775px) {
+    h1 {
+        font-size: 3.125rem;
+    }
+
+    button {
+        font-size: 1.125rem;
+    }
+
+    th {
+        font-size: 1.5625rem;
+    }    
+}
+
+@media (max-width: 638px) {
+    th {
+        font-size: 1.375rem;
+    }
+
+    table {
+        margin: 4.6875rem auto 0;
+        border-spacing: 1.25rem .25rem;
+    }
+}
+
+@media (max-width: 540px) {
+    body > div {
+        padding: 2.8125rem 1.875rem 0;
+    }
+
+    body > div > div {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+        margin-top: 1.875rem;
+    }
+
+    #button-CSV {
+        margin: 0;
+    }
+
+    th {
+        font-size: 20px;
+    }
+
+}
