@@ -319,3 +319,28 @@ if (window.innerWidth <= '680') {
         }
     }, 4000);
 }
+
+/*************************************************************************************/
+
+/******Input mail******/
+
+/*Variables*/
+
+const formNewsletter = document.querySelector('form');
+const inputMail = document.querySelector('input');
+const msgInvalidMail = document.getElementById('invalid-email');
+
+
+formNewsletter.addEventListener('submit', function(event) {
+
+    if (!inputMail.checkValidity()) {
+        msgInvalidMail.classList.add('display-block');
+    }
+
+
+    if(!formNewsletter.checkValidity()){
+        //Stop l'envoie du formulaire
+        event.preventDefault();
+    }
+
+});

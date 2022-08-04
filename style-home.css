@@ -628,6 +628,17 @@ form > input[type="email"]{
     /* ou -webkit-appearance: none;*/
 }
 
+#invalid-email {
+    font-size: 1.125rem;
+    color: #C9AA6E;
+    margin: 5px 0 0;
+    display: none;
+}
+
+#invalid-email.display-block {
+    display: block;
+}
+
 form > input[type="submit"] {
     background-color: #C9AA6E;
     color: white;
@@ -1031,7 +1042,7 @@ form {
     text-align: center;
 }
 
-form > p:nth-child(2) {
+#p-newsletter {
     margin: .625rem 0 .875rem;
 }
 
