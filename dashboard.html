@@ -6,27 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Kanit:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style-dashboard.css">
     <title>Tableau de bord</title>
 </head>
 <body>
-    <div>
-        <h1>Personnes inscrites à la newsletter</h1>
+    <main>
         <div>
-            <button id="button-CSV">Exporter au format CSV</button>
-            <button id="button-deconnect">Se deconnecter</button>
+            <div id="title-buttons">
+                <h1>Personnes inscrites à la newsletter</h1>
+                <div id="buttons">
+                    <button id="button-CSV">Exporter au format CSV</button>
+                    <button id="button-deconnect">Se deconnecter</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Adresse mail</th>
+                        <th>Date d'inscription</th>
+                        <th>Désinscrire</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Adresse mail</th>
-                <th>Date d'inscription</th>
-                <th>Désinscrire</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+        <div id="background-bat"></div>
+        <div id="background-fossil"></div>
+    </main>
 </body>
 </html>

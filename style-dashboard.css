@@ -1,5 +1,17 @@
 body {
-    background-color: #f5f5f5;
+    background-color: #3b3b3b;
+    color: #d4d4d4;
+    margin: 0;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+}
+
+main > div {
+    position: relative;
+    z-index: 1;
 }
 
 h1 {
@@ -10,13 +22,13 @@ h1 {
     padding-bottom: .875rem;
 }
 
-body > div {
+#title-buttons {
     display: flex;
     align-items: flex-end;
     padding: 5.3125rem 5.0625rem 0 7.1875rem;
 }
 
-body > div > div {
+#buttons {
     display: flex;
     margin-top: .9375rem;
 }
@@ -60,17 +72,48 @@ table {
 }
 
 thead {
-    font-size: 32px;
+    font-size: 2rem;
+}
+
+#background-bat {
+    width: 686px;
+    height: 334px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-image: url('pictures/chauve-souris-dashboard.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    z-index: 0;
+    /*transition: top 0.05s ease-out, width 0.05s ease-out;*/
+    transition-property: top, width, height;
+    transition-duration: 0.05s;
+    transition-timing-function: ease-out;
+}
+
+#background-fossil {
+    width: 198px;
+    height: 230px;
+    position: absolute;
+    bottom: 0;
+    background-image: url('pictures/fossile.svg');
+    background-size: contain;
+    z-index: 0;
+    background-position: left bottom;
+    transition-property: width, height;
+    transition-duration: 0.05s;
+    transition-timing-function: ease-out;
 }
 
 @media (max-width: 1723px) {
-    body > div {
+    #title-buttons {
         display: block;
         padding: 5.3125rem 7.1875rem 0;
         width: fit-content;
     }
 
-    body > div > div {
+    #buttons {
         justify-content: flex-end;
         align-items: flex-end;
     }
@@ -80,19 +123,75 @@ thead {
     }
 }
 
+@media (max-width: 1645px) {
+    #background-bat {
+        /*width: 686px;
+        height: 334px;*/
+        width: 500px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1520px) {
+    #background-bat {
+        top: 110px;
+        width: 400px;
+        height: 200px;
+    }
+
+    #background-fossil {
+        width: 150px;
+        height: 174px;
+    }
+}
+
+@media (max-width: 1445px) {
+    #background-bat {
+        top: 200px;
+        width: 400px;
+        height: 200px;
+    }
+}
+
 @media (max-width: 1270px) {
     h1 {
         text-align: center;
     }
 
-    body > div {
+    #title-buttons {
         width: initial;
         padding: 4.6875rem 4.0625rem 0;
     }
 
-    body > div > div {
+    #buttons {
         justify-content: center;
         margin-top: 1.5625rem;
+    }
+
+    #background-bat {
+        top: 110px;
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 925px) {
+    #background-bat {
+        width: 300px;
+        height: 150px;
+    }
+
+    #background-fossil {
+        width: 120px;
+        height: 139px;
+    }
+}
+
+@media (max-width: 850px) {
+    #background-bat {
+        top: 155px;
+        width: 300px;
+        height: 150px;
     }
 }
 
@@ -105,13 +204,36 @@ thead {
         font-size: 1.125rem;
     }
 
-    th {
+    thead {
         font-size: 1.5625rem;
-    }    
+    }
+
+    #background-bat {
+        top: 110px;
+        width: 300px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 695px) {
+    #background-bat {
+        width: 260px;
+        height: 130px;
+    }
+
+    #background-fossil {
+        width: 100px;
+        height: 116px;
+    }
 }
 
 @media (max-width: 638px) {
-    th {
+
+    #title-buttons {
+        padding: 2.8125rem 1.875rem 0;
+    }
+
+    thead {
         font-size: 1.375rem;
     }
 
@@ -119,26 +241,155 @@ thead {
         margin: 4.6875rem auto 0;
         border-spacing: 1.25rem .25rem;
     }
+
+    #background-bat {
+        width: 200px;
+        height: 100px;
+    }
+
+    #background-fossil {
+        width: 85px;
+        height: 99px;
+    }
+}
+
+@media (max-width: 595px) {
+    #background-bat {
+        width: 146px;
+        height: 73px;
+    }
+
+    #background-fossil {
+        width: 65px;
+        height: 76px;
+    }
 }
 
 @media (max-width: 540px) {
-    body > div {
-        padding: 2.8125rem 1.875rem 0;
+
+    #title-buttons {
+        padding: 2.25rem 1.875rem 0;
     }
 
-    body > div > div {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #buttons {
         flex-direction: column;
         align-items: center;
         row-gap: 15px;
-        margin-top: 1.875rem;
+        margin-top: .9375rem;
+    }
+
+    button {
+        font-size: 1rem
     }
 
     #button-CSV {
         margin: 0;
+        padding: .6875rem .625rem;
     }
 
-    th {
-        font-size: 20px;
+    #button-deconnect {
+        background-color: #AF272B;
+        padding: .875rem .8125rem;
     }
 
+    table {
+        margin: 2.6875rem auto 0;
+        border-spacing: 1.25rem .25rem;
+    }
+
+    thead {
+        font-size: 1.0625rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+    #title-buttons {
+        padding: 1.875rem 1.875rem 0;
+    }
+
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    #buttons {
+        row-gap: 7px;
+        margin-top: 0;
+    }
+
+    button {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    #button-CSV {
+        padding: .5rem .4375rem;
+    }
+
+    #button-deconnect {
+        padding: .6875rem .625rem;
+    }
+
+    table {
+        margin: 1.625rem auto 0;
+        border-spacing: 1.25rem .25rem;
+    }
+
+    thead {
+        font-size: 1rem;
+    }
+
+    #background-bat {
+        top: 70px;
+    }
+}
+
+@media (max-width: 415px) {
+
+    #title-buttons {
+        padding: 1.25rem 1.25rem 0;
+    }
+
+    #buttons {
+        row-gap: 9px;
+        margin-top: .1875rem;
+    }
+
+    table {
+        margin: 2rem auto 0;
+    }
+
+    thead {
+        font-family: sans-serif;
+        font-size: .875rem;
+    }
+
+    #background-bat {
+        top: 70px;
+        width: 120px;
+        height: 60px;
+    }
+
+    #background-fossil {
+        width: 55px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 350px) {
+    #background-bat {
+        top: 180px;
+        width: 120px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 312px) {
+    #background-bat {
+        top: 93px;
+    }
 }
