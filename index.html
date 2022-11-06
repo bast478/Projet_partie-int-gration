@@ -178,10 +178,11 @@
             <div>
                 <img src="pictures/footer_gouffre.webp" alt="Photo de l'acceuil du Gouffre.">
             </div>
-            <form id="formNewsletter" action="" method="post" novalidate>
+            <form id="formNewsletter" action="php/email.php" method="post" novalidate>
                 <h3 class="main_titles">Newsletter</h3>
                 <p id="p-newsletter" class="footer_text">Pour avoir des actualités sur le gouffre.</p>
                 <input class="footer_text" type="email" placeholder="Addresse mail" name="email" required>
+                <p id="message-conn-email"></p>
                 <p id="invalid-email">Veuillez rentrer une addresse mail valide</p>
                 <input type="submit" value="s'abonner">
             </form>

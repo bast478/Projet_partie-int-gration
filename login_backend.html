@@ -9,15 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Kanit:wght@500&display=swap" rel="stylesheet">
     <title>Page de login backend</title>
+    <script src="script-login.js" defer></script>
 </head>
 <body>
     <main>
         <h1>Page de login du backend</h1>
+        <p id="connection-message"></p>
         <div>
-            <form id="form-back" action="" method="post">
+            <form id="form-back">
                 <label for="nom-utilisateur">Nom d'utilisateur :</label>
+                <p class="error-util hidden">Vous devez rentrez un nom.</p>
                 <input type="text" name="nom-utilisateur" id="nom-utilisateur">
+                <p id="connection-error"></p>
                 <label for="mdp">Mot de passe :</label>
+                <p class="error-mdp hidden">Vous devez rentrer un mot de passe.</p>
                 <input type="password" name="mdp" id="mdp">
             </form>
         <input type="submit" value="Envoyer" form="form-back">

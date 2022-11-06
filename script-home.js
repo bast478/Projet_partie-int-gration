@@ -328,19 +328,31 @@ if (window.innerWidth <= '680') {
 
 const formNewsletter = document.querySelector('form');
 const inputMail = document.querySelector('input');
+const msgConnMail = document.getElementById('message-conn-email');
 const msgInvalidMail = document.getElementById('invalid-email');
 
+/*Action*/
 
 formNewsletter.addEventListener('submit', function(event) {
+
+    event.preventDefault();
 
     if (!inputMail.checkValidity()) {
         msgInvalidMail.classList.add('display-block');
     }
 
+    const formData = new FormData(formNewsletter);
 
-    if(!formNewsletter.checkValidity()){
-        //Stop l'envoie du formulaire
-        event.preventDefault();
-    }
+    fetch('php/email.php', {
+        body: formData,
+        method: 'POST'
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log('Il ya eu un problème avec l\'opération fetch: ' + error.message);
+    });
 
 });

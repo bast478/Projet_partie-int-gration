@@ -8,7 +8,7 @@ body {
 
 main {
     background-image: url('pictures/gallery_pic_3.webp');
-    padding: 85px 0 55px;
+    padding: 5.3125rem 0 3.4375rem;
     min-height: 100vh;
     box-sizing: border-box;
     display: flex;
@@ -23,12 +23,16 @@ main > div {
 
 h1 {
     /*margin: 0 0 9rem;*/
-    margin: 0 0 130px;
+    margin: 0 0 8.125rem;
     font-size: 5.3125rem;
     text-shadow: .625rem -0.375rem .1875rem rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 0 7rem;
     font-weight: 400;
+}
+
+h1.connection {
+    margin: 0;
 }
 
 h1, form :not(input[type="submit"]) {
@@ -37,6 +41,32 @@ h1, form :not(input[type="submit"]) {
 
 h1, label, input[type='submit'] {
     color: #fff;
+}
+
+#connection-message {
+	margin: 0;
+	font-size: 1.75rem;
+	color: #fff;
+	font-family: 'Changa One', cursive;
+	text-shadow: .1875rem -0.125rem .125rem rgba(0, 0, 0, 0.8);
+    transition: opacity .5s;
+    height: 0;
+    opacity: 0;
+}
+
+#connection-message.connection {
+    height: initial;
+    margin: 3.125rem 0;
+    opacity: 1;
+}
+
+@keyframes message-connection {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+#connection-message.rotate {
+    animation: message-connection .5s;
 }
 
 form {
@@ -51,21 +81,98 @@ label, input {
 }
 
 label {
-    font-size: 34px;
+    font-size: 2.125rem;
     text-shadow: .1875rem -0.125rem .125rem rgba(0, 0, 0, 0.8);
     margin-bottom: 1.375rem;
 }
 
+.error-util, .error-mdp {
+    color: #ffd8d8;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    transition-property: height, margin;
+    height: 17px;
+}
+
+.error-util.hidden, .error-mdp.hidden {
+    height: 0;
+    margin: 0;
+}
+
 input {
-    font-size: 28px;
+    font-size: 1.75rem;
     border: none;
     outline: none;
     padding: .3125rem .5rem;
     border-radius: 5px;
 }
 
+@keyframes showConnErrorInp {
+    from {margin-bottom: 1.375rem;}
+    to {margin-bottom: .8438rem;}
+}
+
 input[type='text'] {
     margin-bottom: 2.75rem;
+}
+
+input[type='text'].showConnError {
+    animation-name: showConnErrorInp;
+    animation-fill-mode: forwards;
+    animation-duration: .2s;
+}
+
+@keyframes hideConnErrorInp {
+    from {margin-bottom: .8438rem;}
+    to {margin-bottom: 1.375rem;}
+}
+
+input[type='text'].success {
+    animation-name: hideConnErrorInp;
+    animation-fill-mode: forwards;
+    animation-duration: .2s;
+}
+
+#connection-error {
+	margin: 0;
+    height: 0px;
+	color: #ff9696;
+	text-align: center;
+	text-shadow: .1875rem -0.125rem .125rem rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition-property: height, opacity;
+    transition-duration: .2s;
+}
+
+#connection-error.showConnError {
+    opacity: 1;
+    height: 17px;
+}
+
+@keyframes showConnErrorLab {
+    from {margin-top: 1.375rem;}
+    to {margin-top: .8438rem;}
+}
+
+label[for='mdp'] {
+    margin-top: 2.75rem;
+}
+
+label[for='mdp'].showConnError {
+    animation-name: showConnErrorLab;
+    animation-fill-mode: forwards;
+    animation-duration: .2s;
+}
+
+@keyframes hideConnErrorLab {
+    from {margin-top: .8438rem;}
+    to {margin-top: 1.375rem;}
+}
+
+label[for='mdp'].success {
+    animation-name: hideConnErrorLab;
+    animation-fill-mode: forwards;
+    animation-duration: .2s;
 }
 
 input[type="submit"] {
@@ -90,11 +197,11 @@ input[type="submit"]:hover {
     }
 
     label {
-        font-size: 29px;
+        font-size: 1.8125rem;
     }
 
     input {
-        font-size: 26px;
+        font-size: 1.625rem;
     }
 
     input[type="submit"] {
@@ -104,22 +211,22 @@ input[type="submit"]:hover {
 
 @media (max-width: 896px) {
     h1 {
-        font-size: 75px;
-        padding: 0 80px;
+        font-size: 4.6875rem;
+        padding: 0 5rem;
     }
 
     label {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     input {
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
 }
 
 @media (max-width: 761px) {
     h1 {
-        font-size: 68px;
+        font-size: 4.25rem;
         padding: 0 4.375rem;
     }
 
@@ -145,21 +252,21 @@ input[type="submit"]:hover {
     }
 
     label {
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
 
     input {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 }
 
 @media (max-width: 589px) {
     h1 {
-        font-size: 55px;
+        font-size: 3.4375rem;
     }
 
     label {
-        margin-bottom: 18px;
+        margin-bottom: 1.125rem;
     }
 
     /*input {
@@ -167,31 +274,31 @@ input[type="submit"]:hover {
     }*/
 
     input[type="text"] {
-        margin-bottom: 35px;
+        margin-bottom: 2.1875rem;
     }
 
     input[type="submit"] {
-        margin: 30px auto 0;
+        margin: 1.875rem auto 0;
         /*font-size: 22px;*/
     }
 }
 
 @media (max-width: 551px) {
     main {
-        padding: 60px 0 36px;
+        padding: 3.75rem 0 2.25rem;
     }
 
     h1 {
-        font-size: 50px;
-        padding: 0 40px;
+        font-size: 3.125rem;
+        padding: 0 2.5rem;
     }
 }
 
 @media (max-width: 482px) {
     h1 {
-        font-size: 45px;
-        padding: 0 35px;
-        margin: 0 0 85px;
+        font-size: 2.8125rem;
+        padding: 0 2.1875rem;
+        margin: 0 0 5.3125rem;
     }
 
     /*label {
@@ -205,13 +312,13 @@ input[type="submit"]:hover {
 
 @media (max-width: 417px) {
     h1 {
-        font-size: 40px;
-        padding: 0 29px;
-        margin: 0 0 70px;
+        font-size: 2.5rem;
+        padding: 0 1.8125rem;
+        margin: 0 0 4.375rem;
     }
 
     input[type="submit"] {
-        margin: 30px auto 0;
+        margin: 1.875rem auto 0;
     }
 }
 
@@ -219,21 +326,21 @@ input[type="submit"]:hover {
 
     main {
         /*row-gap: 10vh;*/
-        padding: 45px 0 26px;
+        padding: 2.8125rem 0 1.625rem;
     }
 
     input[type="text"] {
-        margin-bottom: 35px;
+        margin-bottom: 2.1875rem;
     }
 
     label {
-        margin-bottom: 18px;
+        margin-bottom: 1.125rem;
     }
 }
 
 @media (max-width: 332px) {
     h1 {
-        margin: 0 0 50px;
+        margin: 0 0 3.125rem;
     }
 }
 
@@ -243,9 +350,9 @@ input[type="submit"]:hover {
     }*/
 
     h1 {
-        font-size: 35px;
-        padding: 0 20px;
-        margin: 0 0 60px;
+        font-size: 2.1875rem;
+        padding: 0 1.25rem;
+        margin: 0 0 3.75rem;
     }
 }
 
@@ -255,12 +362,12 @@ input[type="submit"]:hover {
     }*/
 
     h1 {
-        font-size: 32px;
-        padding: 0 15px;
+        font-size: 2rem;
+        padding: 0 .9375rem;
     }
 
     label {
-        font-size: 21px;
+        font-size: 1.3125rem;
     }
 
     form :not(label, input[type="submit"]) {
@@ -268,12 +375,12 @@ input[type="submit"]:hover {
     }
 
     input {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }
 
 @media (max-width: 234px) {
     h1 {
-        font-size: 27px;
+        font-size: 1.6875rem;
     }
 }

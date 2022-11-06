@@ -1,3 +1,18 @@
+<?php
+// LOAD LIBRARY
+require "lib/lib-admin.php";
+
+// LOGOUT
+if (isset($_POST["logout"])) {
+    unset($_SESSION["admin"]);
+}
+
+// REDIRECT IF NOT SIGNED IN
+if (!isset($_SESSION["admin"])) {
+    header("Location: ../login_backend.html");
+    exit();
+} ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Kanit:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style-dashboard.css">
+    <script src="dashboard.js" defer></script>
     <title>Tableau de bord</title>
 </head>
 <body>
@@ -17,7 +33,7 @@
                 <h1>Personnes inscrites à la newsletter</h1>
                 <div id="buttons">
                     <button id="button-CSV">Exporter au format CSV</button>
-                    <button id="button-deconnect">Se deconnecter</button>
+                    <button form='deconnection' id="button-deconnect">Se deconnecter</button>
                 </div>
             </div>
             <table>
@@ -33,6 +49,9 @@
         </div>
         <div id="background-bat"></div>
         <div id="background-fossil"></div>
+        <form id='deconnection' method='post'>
+            <input type="hidden" name="logout">
+        </form>
     </main>
 </body>
 </html>
