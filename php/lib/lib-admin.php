@@ -36,7 +36,7 @@ function __destruct () {
 
     // GET BACK-END USER BY NAME
     function getByName ($name) {
-        $this->stmt = $this->pdo->prepare("SELECT user_id, user_name, user_password FROM Admin WHERE user_name = :name");
+        $this->stmt = $this->pdo->prepare("SELECT admin_id, admin, password FROM admin WHERE admin = :name");
         $this->stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $this->stmt->execute();
         return $this->stmt->fetch();
@@ -48,13 +48,13 @@ function __destruct () {
         $user = $this->getByName($name);
         $checkPass = is_array($user);
         // CHECK PASS
-        if ($checkPass) { $checkPass = password_verify($password, $user["user_password"]); }
+        if ($checkPass) { $checkPass = password_verify($password, $user["password"]); }
         // REGISTER MEMBER INTO SESSION
         if ($checkPass) {
             foreach ($user as $k=>$v) {
                 $_SESSION["admin"][$k] = $v;
             }
-            unset($_SESSION["admin"]["user_password"]);
+            unset($_SESSION["admin"]["password"]);
         }
         // RESULT
         if (!$checkPass) {
@@ -68,17 +68,25 @@ function __destruct () {
 
     // PUT EMAIL IN DB
     function putEmail ($email) {
-        if (isset($email) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $this->stmt = $this->pdo->prepare("INSERT INTO Email (user_email) VALUES (:email)");
+        if (isset($email) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && $email === htmlspecialchars($email)) {
+            $this->stmt = $this->pdo->prepare("INSERT IGNORE INTO newsletter (subscriber_email) VALUES (:email)");
             $this->stmt->bindParam(':email', $email, PDO::PARAM_STR);
-            $this->stmt->execute();
-            return $this->stmt->fetch();
+            try {
+                $this->stmt->execute();
+                return true;
+            } catch (Exception $e) {
+                $this->error = $e->getMessage();
+                return true;
+            }
+            
         } else {
-            return $this->error = 'Email non valide';
+            $this->error = 'Adresse email non valide.';
+            return false;
         }
     }
 }
 
 // START
-session_start(['cookie_httponly' => true, 'cookie_samesite' => 'Strict', 'cookie_secure' => true]);
+//session_start(['cookie_httponly' => true, 'cookie_samesite' => 'Strict', 'cookie_secure' => true]);
+session_start(['cookie_httponly' => true, 'cookie_samesite' => 'Strict']);
 $_ADM = new Admin();

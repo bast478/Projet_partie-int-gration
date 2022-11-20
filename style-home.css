@@ -628,14 +628,14 @@ form > input[type="email"]{
     /* ou -webkit-appearance: none;*/
 }
 
-#invalid-email {
+#message-conn-email {
     font-size: 1.125rem;
     color: #C9AA6E;
     margin: 5px 0 0;
     display: none;
 }
 
-#invalid-email.display-block {
+#message-conn-email.display-block {
     display: block;
 }
 

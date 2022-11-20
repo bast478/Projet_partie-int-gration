@@ -276,7 +276,6 @@ document.addEventListener('keydown', e => {
 
         default: return;
     }
-    e.preventDefault();
   });
   
 
@@ -329,16 +328,17 @@ if (window.innerWidth <= '680') {
 const formNewsletter = document.querySelector('form');
 const inputMail = document.querySelector('input');
 const msgConnMail = document.getElementById('message-conn-email');
-const msgInvalidMail = document.getElementById('invalid-email');
 
 /*Action*/
 
 formNewsletter.addEventListener('submit', function(event) {
 
     event.preventDefault();
-
+    msgConnMail.classList.add('display-block');
+    
     if (!inputMail.checkValidity()) {
-        msgInvalidMail.classList.add('display-block');
+        msgConnMail.textContent = 'Adresse non valide.';
+        return;
     }
 
     const formData = new FormData(formNewsletter);
@@ -349,10 +349,15 @@ formNewsletter.addEventListener('submit', function(event) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        if (data === true) {
+            msgConnMail.textContent = 'Adresse email ajoutée.';
+        } else if (data === false) {
+            msgConnMail.textContent = 'Adresse non valide.';
+        }
     })
     .catch(error => {
         console.log('Il ya eu un problème avec l\'opération fetch: ' + error.message);
+        msgConnMail.textContent = 'Problème de connexion.';
     });
 
 });

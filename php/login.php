@@ -4,7 +4,7 @@
 require "lib/lib-admin.php";
 
 // (B) CHECK LOGIN CREDENTIALS
-if (count($_POST)!=0) {
+if (count($_POST) != 0) {
   $util = $_POST["nom-utilisateur"];
   $mdp = $_POST["mdp"];
   $_ADM->verify($util, $mdp);
