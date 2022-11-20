@@ -75,6 +75,14 @@ thead {
     font-size: 2rem;
 }
 
+td button {
+    background-color: #1f1f1f;
+}
+
+td button:hover {
+    background-color: #2d2d2d;
+}
+
 #background-bat {
     width: 686px;
     height: 334px;

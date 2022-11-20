@@ -1,7 +1,8 @@
 <?php
 
 // (A) LOAD LIBRARY
-require "lib/lib-admin.php";
+require_once "lib/Admin.php";
+$_ADM = new Admin;
 
 // (B) CHECK LOGIN CREDENTIALS
 if (count($_POST) != 0) {

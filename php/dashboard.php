@@ -1,6 +1,6 @@
 <?php
 // LOAD LIBRARY
-require "lib/lib-admin.php";
+require_once "lib/Admin.php";
 
 // LOGOUT
 if (isset($_POST["logout"])) {
@@ -53,5 +53,12 @@ if (!isset($_SESSION["admin"])) {
             <input type="hidden" name="logout">
         </form>
     </main>
+    <template>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><button type="button" data-id="">Supprimer</button></td>
+        </tr>
+    </template>
 </body>
 </html>
