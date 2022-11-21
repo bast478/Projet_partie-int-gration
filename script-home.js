@@ -126,21 +126,29 @@ listMinPictures.forEach(function(minPicture){
 
 arrow.addEventListener('click', function(){
     mainPictureGallery.src = mainPicture.src;
-    modal.style.display = "block";
+    modal.classList.remove('none');
+    modal.classList.add('appear');
     precNextDiapo(listPictures, mainPictureGallery, leftArrowGallery, rightArrowGallery);
     closeDiapo(modal, crossGallery);
 });
 
 // Fermer la photo du diapo
 
+function closeModal(diapo) {
+    setTimeout(() => {
+        diapo.classList.add('none');
+    }, 400);
+    diapo.classList.remove('appear');
+}
+
 function closeDiapo (diapo, cross) {
     cross.onclick = function() {
-        diapo.style.display = "none";
+        closeModal(diapo);
     }
 
     window.onclick = function(event) {
         if (event.target == diapo) {
-          diapo.style.display = "none";
+          closeModal(diapo);
         }
     }
 }
