@@ -1253,11 +1253,7 @@ form {
     }
 
 
-    .gallery-top {
-        padding: 0;
-    }
-
-    .gallery-bottom {
+    .gallery-top, .gallery-top:hover, .gallery-bottom, .gallery-bottom:hover {
         padding: 0;
     }
 
